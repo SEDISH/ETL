@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="ARV_status_loockup_File" prompt="ARV_status_loockup_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/ARV_status_loockup.csv"/>
+  <contextParameter comment="" name="ARV_status_loockup_RowSeparator" prompt="ARV_status_loockup_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
+  <contextParameter comment="" name="ARV_status_loockup_Encoding" prompt="ARV_status_loockup_Encoding?" promptNeeded="false" type="id_String" value="UTF-8"/>
+  <contextParameter comment="" name="ARV_status_loockup_FieldSeparator" prompt="ARV_status_loockup_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
+</talendfile:ContextType>

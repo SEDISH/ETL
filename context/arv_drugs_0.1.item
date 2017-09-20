@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="arv_drugs_File" prompt="arv_drugs_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/arv_drugs.csv"/>
+  <contextParameter comment="" name="arv_drugs_RowSeparator" prompt="arv_drugs_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
+  <contextParameter comment="" name="arv_drugs_Encoding" prompt="arv_drugs_Encoding?" promptNeeded="false" type="id_String" value="US-ASCII"/>
+  <contextParameter comment="" name="arv_drugs_FieldSeparator" prompt="arv_drugs_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
+</talendfile:ContextType>

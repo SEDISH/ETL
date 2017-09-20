@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_2x_tkZ4EEeeYy7K7VysegQ" name="arv_drugs" dataPackage="_2x_tkp4EEeeYy7K7VysegQ" ContextMode="true" ContextId="_vg5egJ4EEeeYy7K7VysegQ" contextName="Default" Server="Localhost 127.0.0.1" FilePath="context.arv_drugs_File" Encoding="context.arv_drugs_Encoding" FieldSeparatorValue="context.arv_drugs_FieldSeparator" RowSeparatorValue="context.arv_drugs_RowSeparator" FieldSeparatorType="Custom UTF8"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_2x_tkp4EEeeYy7K7VysegQ" name="default" dataManager="_2x_tkZ4EEeeYy7K7VysegQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_2x_tk54EEeeYy7K7VysegQ" id="_qwbZIJ4EEeeYy7K7VysegQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2x_tlJ4EEeeYy7K7VysegQ" label="drug_id" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2x_tlZ4EEeeYy7K7VysegQ" label="drug_name" length="500" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
