@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="ETL_Server" prompt="ETL_Server?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Login" prompt="ETL_Login?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Schema" prompt="ETL_Schema?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Port" prompt="ETL_Port?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Password" prompt="ETL_Password?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_Password" value=""/>
-    <contextParameter comment="" name="ETL_Database" prompt="ETL_Database?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="arv_drugs_FieldSeparator" prompt="arv_drugs_FieldSeparator?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
-    <contextParameter comment="" name="arv_drugs_File" prompt="arv_drugs_File?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/arv_drugs.csv"/>
-    <contextParameter comment="" name="arv_drugs_Encoding" prompt="arv_drugs_Encoding?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_String" value="US-ASCII"/>
-    <contextParameter comment="" name="arv_drugs_RowSeparator" prompt="arv_drugs_RowSeparator?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
-    <contextParameter comment="" name="alerts_File" prompt="alerts_File?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/alerts.csv"/>
-    <contextParameter comment="" name="alerts_RowSeparator" prompt="alerts_RowSeparator?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
-    <contextParameter comment="" name="alerts_Encoding" prompt="alerts_Encoding?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_String" value="UTF-8"/>
-    <contextParameter comment="" name="alerts_FieldSeparator" prompt="alerts_FieldSeparator?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
-    <contextParameter comment="" name="ARV_status_loockup_File" prompt="ARV_status_loockup_File?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/ARV_status_loockup.csv"/>
-    <contextParameter comment="" name="ARV_status_loockup_Encoding" prompt="ARV_status_loockup_Encoding?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="UTF-8"/>
-    <contextParameter comment="" name="ARV_status_loockup_RowSeparator" prompt="ARV_status_loockup_RowSeparator?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
-    <contextParameter comment="" name="ARV_status_loockup_FieldSeparator" prompt="ARV_status_loockup_FieldSeparator?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="ETL_Server" prompt="ETL_Server?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ETL_Login" prompt="ETL_Login?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ETL_Schema" prompt="ETL_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ETL_Port" prompt="ETL_Port?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ETL_Password" prompt="ETL_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter comment="" name="ETL_Database" prompt="ETL_Database?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="arv_drugs_FieldSeparator" prompt="arv_drugs_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="arv_drugs_File" prompt="arv_drugs_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/arv_drugs.csv"/>
+    <contextParameter comment="" name="arv_drugs_Encoding" prompt="arv_drugs_Encoding?" promptNeeded="false" type="id_String" value="US-ASCII"/>
+    <contextParameter comment="" name="arv_drugs_RowSeparator" prompt="arv_drugs_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="alerts_File" prompt="alerts_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/alerts.csv"/>
+    <contextParameter comment="" name="alerts_RowSeparator" prompt="alerts_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="alerts_Encoding" prompt="alerts_Encoding?" promptNeeded="false" type="id_String" value="UTF-8"/>
+    <contextParameter comment="" name="alerts_FieldSeparator" prompt="alerts_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="ARV_status_loockup_File" prompt="ARV_status_loockup_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/ARV_status_loockup.csv"/>
+    <contextParameter comment="" name="ARV_status_loockup_Encoding" prompt="ARV_status_loockup_Encoding?" promptNeeded="false" type="id_String" value="UTF-8"/>
+    <contextParameter comment="" name="ARV_status_loockup_RowSeparator" prompt="ARV_status_loockup_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="ARV_status_loockup_FieldSeparator" prompt="ARV_status_loockup_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -129,13 +135,13 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_7pd4oJFoEeeAQb-7B06LBA" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="context.ETL_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ETLDatabase_Server"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.ETL_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.ETL_Database"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ETL_Schema"/>
-    <elementParameter field="TEXT" name="USER" value="context.ETL_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucm3GeM7JkvY8VDkDFCAOdF"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ETLDatabase_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ETLDatabase_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ETLDatabase_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.ETLDatabase_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kueRiRK8sXfOS4+ZWG9Af6yNABfFgK9e7dE="/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -149,8 +155,6 @@
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_81uAAJ4DEeeYy7K7VysegQ" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.alerts_File"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -165,8 +169,6 @@
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
     <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_81uAAJ4DEeeYy7K7VysegQ - metadata" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_81uAAJ4DEeeYy7K7VysegQ - metadata" show="false"/>
     <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace&quot;" show="false"/>
@@ -271,8 +273,6 @@
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_2" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_2x_tkJ4EEeeYy7K7VysegQ" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.arv_drugs_File"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -287,8 +287,6 @@
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
     <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_2x_tkJ4EEeeYy7K7VysegQ - metadata" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_2x_tkJ4EEeeYy7K7VysegQ - metadata" show="false"/>
     <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace&quot;" show="false"/>
@@ -393,8 +391,6 @@
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_3" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_I59YgJ4FEeeYy7K7VysegQ" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
     <elementParameter field="FILE" name="FILENAME" value="context.ARV_status_loockup_File"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
@@ -409,8 +405,6 @@
     <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
     <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_I59YgJ4FEeeYy7K7VysegQ - metadata" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_I59YgJ4FEeeYy7K7VysegQ - metadata" show="false"/>
     <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace&quot;" show="false"/>

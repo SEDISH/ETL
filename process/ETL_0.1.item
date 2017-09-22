@@ -13,12 +13,12 @@
     <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="false" type="id_String" value="dhis"/>
     <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="false" type="id_Password" value="XN8p6O4/8gE="/>
     <contextParameter comment="" name="Schema" prompt="Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Server" prompt="ETL_Server?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value="172.18.0.5"/>
-    <contextParameter comment="" name="ETL_Login" prompt="ETL_Login?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value="dhis"/>
-    <contextParameter comment="" name="ETL_Schema" prompt="ETL_Schema?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Password" prompt="ETL_Password?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_Password" value="XN8p6O4/8gE="/>
-    <contextParameter comment="" name="ETL_Port" prompt="ETL_Port?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value="5432"/>
-    <contextParameter comment="" name="ETL_Database" prompt="ETL_Database?" promptNeeded="false" repositoryContextId="_4LJ2EJIVEeedjac0LmuSqg" type="id_String" value="etl"/>
+    <contextParameter comment="" name="ETL_Server" prompt="ETL_Server?" promptNeeded="false" type="id_String" value="172.18.0.5"/>
+    <contextParameter comment="" name="ETL_Login" prompt="ETL_Login?" promptNeeded="false" type="id_String" value="dhis"/>
+    <contextParameter comment="" name="ETL_Schema" prompt="ETL_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="ETL_Password" prompt="ETL_Password?" promptNeeded="false" type="id_Password" value="XN8p6O4/8gE="/>
+    <contextParameter comment="" name="ETL_Port" prompt="ETL_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter comment="" name="ETL_Database" prompt="ETL_Database?" promptNeeded="false" type="id_String" value="etl"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
