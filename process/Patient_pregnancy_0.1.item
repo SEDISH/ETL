@@ -7,6 +7,12 @@
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="128" show="false"/>
@@ -1178,6 +1184,7 @@
       <column comment="" defaultValue="" key="true" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -1185,11 +1192,13 @@
         <mapperTableEntries name="patient_id" expression="row16.patient_id " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="row16.start_date " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="TalendDate.compareDate(Var.start_date,row11.value_datetime,&quot;yyyy-MM-dd&quot;)==-1?row11.value_datetime:null " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" expression="row16.encounter_id " type="id_Integer"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="out">
         <mapperTableEntries name="patient_id" expression="Var.patient_id  " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="Var.start_date  " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="Var.end_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" expression="Var.encounter_id " type="id_Integer"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row16" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
@@ -1699,6 +1708,8 @@
       <elementValue elementRef="INPUT_COLUMN" value="patient_id"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="start_date"/>
       <elementValue elementRef="INPUT_COLUMN" value="start_date"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="INPUT_COLUMN" value="encounter_id"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="end_date"/>
@@ -1715,6 +1726,7 @@
       <column comment="" defaultValue="" key="true" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="352">
@@ -1733,6 +1745,7 @@
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -1740,16 +1753,19 @@
         <mapperTableEntries name="patient_id" expression="row5.patient_id " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="row5.start_date " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="row5.end_date==null?(TalendDate.compareDate(Var.start_date,encounters.encounter_datetime,&quot;yyyy-MM-dd&quot;)==-1?encounters.encounter_datetime:null):row5.end_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" expression="row5.encounter_id " type="id_Integer"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="out3">
         <mapperTableEntries name="patient_id" expression="Var.patient_id   " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="Var.start_date   " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="Var.end_date   " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" expression="Var.encounter_id " type="id_Integer"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
         <mapperTableEntries name="start_date" type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="encounters" expressionFilter="TalendDate.compareDate(row5.start_date,encounters.encounter_datetime,&quot;yyyy-MM-dd&quot;)==-1" activateExpressionFilter="true" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="encounter_id" type="id_Integer"/>
@@ -2058,6 +2074,8 @@
       <elementValue elementRef="INPUT_COLUMN" value="patient_id"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="start_date"/>
       <elementValue elementRef="INPUT_COLUMN" value="start_date"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="INPUT_COLUMN" value="encounter_id"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="end_date"/>
@@ -2074,6 +2092,7 @@
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1728" posY="352">
@@ -2092,6 +2111,7 @@
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -2105,16 +2125,19 @@
         <mapperTableEntries name="var3" expression="(TalendDate.compareDate(Var.start_date,row10.encounter_datetime,&quot;yyyy-MM-dd&quot;)==-1&amp;&amp;row8.end_date==null)?TalendDate.addDate(Var.var2,&quot;yyyy-MM-dd&quot;,1,&quot;yyyy&quot;):null " type="id_String" nullable="true"/>
         <mapperTableEntries name="var4" expression="Var.var3!=null?TalendDate.parseDate(&quot;yyyy-MM-dd&quot;,Var.var3):null " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="(TalendDate.compareDate(Var.start_date,row10.encounter_datetime,&quot;yyyy-MM-dd&quot;)==-1&amp;&amp;row8.end_date==null)?Var.var4:row8.end_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id_1" expression="row8.encounter_id " type="id_Integer"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="result">
         <mapperTableEntries name="patient_id" expression="Var.patient_id " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="Var.start_date " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="Var.end_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" expression="Var.encounter_id_1 " type="id_Integer"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row8" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
         <mapperTableEntries name="start_date" type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" type="id_Integer"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row9" expressionFilter="row9.concept_id==1427" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="obs_id" type="id_Integer"/>
@@ -2180,8 +2203,6 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.SHRDatabase_Login" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kudRdJuMzS3acFQcAWC3ubkhLfW832EgKXI=" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q - obs" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;obs&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -2473,6 +2494,8 @@
       <elementValue elementRef="INPUT_COLUMN" value="patient_id"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="start_date"/>
       <elementValue elementRef="INPUT_COLUMN" value="start_date"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="INPUT_COLUMN" value="encounter_id"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
       <elementValue elementRef="OUTPUT_COLUMN" value="end_date"/>
@@ -2489,6 +2512,7 @@
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="2016" posY="352">
@@ -2504,7 +2528,8 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="result1" name="result1">
-      <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
@@ -2514,9 +2539,11 @@
         <mapperTableEntries name="patient_id" expression="row12.patient_id " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="row12.start_date " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="(TalendDate.diffDate(TalendDate.getCurrentDate(),row12.end_date,&quot;MM&quot;)>=9&amp;&amp;row12.end_date==null)?TalendDate.addDate(row12.start_date,9,&quot;MM&quot;):row12.end_date " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" expression="row12.encounter_id " type="id_Integer"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="result1">
         <mapperTableEntries name="patient_id" expression="Var.patient_id " type="id_Integer"/>
+        <mapperTableEntries name="encounter_id" expression="Var.encounter_id " type="id_Integer"/>
         <mapperTableEntries name="start_date" expression="Var.start_date " type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" expression="Var.end_date " type="id_Date" nullable="true"/>
       </outputTables>
@@ -2524,6 +2551,7 @@
         <mapperTableEntries name="patient_id" type="id_Integer"/>
         <mapperTableEntries name="start_date" type="id_Date" nullable="true"/>
         <mapperTableEntries name="end_date" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="encounter_id" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
@@ -2544,6 +2572,8 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="patient_id"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="start_date"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="end_date"/>
@@ -2554,9 +2584,85 @@
     <elementParameter field="TEXT" name="LABEL" value="Patient_pregnancy"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="result1" name="tLogRow_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2336" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_7pd4oJFoEeeAQb-7B06LBA" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ETLDatabase_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ETLDatabase_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ETLDatabase_Database"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ETLDatabase_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.ETLDatabase_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kueRiRK8sXfOS4+ZWG9Af6yNABfFgK9e7dE="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;patient_pregnancy&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="patient_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="start_date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="end_date"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="result1" name="tPostgresqlOutput_1">
+      <column comment="" defaultValue="" key="true" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="result1" name="REJECT">
+      <column comment="" defaultValue="" key="true" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="true" length="-1" name="encounter_id" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="start_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="end_date" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
@@ -3079,6 +3185,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="end_date"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="out" show="false"/>
@@ -3295,6 +3404,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="end_date"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="out3" show="false"/>
@@ -3446,6 +3558,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="var3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="encounter_id"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3625,9 +3740,27 @@
       <elementValue elementRef="TRACE_COLUMN" value="end_date"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="encounter_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="result1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row19" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tPostgresqlOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="patient_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="start_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="end_date"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row19" show="false"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tMysqlInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
