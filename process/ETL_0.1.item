@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
-  <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="OpenMRSLocal_AdditionalParams" prompt="OpenMRSLocal_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="OpenMRSLocal_Database" prompt="OpenMRSLocal_Database?" promptNeeded="false" type="id_String" value="openmrs"/>
-    <contextParameter comment="" name="OpenMRSLocal_Login" prompt="OpenMRSLocal_Login?" promptNeeded="false" type="id_String" value="root"/>
-    <contextParameter comment="" name="OpenMRSLocal_Password" prompt="OpenMRSLocal_Password?" promptNeeded="false" type="id_Password" value="1QY6ZyNqCD4BAhKeqSkILQ=="/>
-    <contextParameter comment="" name="OpenMRSLocal_Port" prompt="OpenMRSLocal_Port?" promptNeeded="false" type="id_String" value="3306"/>
-    <contextParameter comment="" name="OpenMRSLocal_Server" prompt="OpenMRSLocal_Server?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter comment="" name="Server" prompt="Server?" promptNeeded="false" type="id_String" value="172.18.0.3"/>
-    <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="false" type="id_String" value="5432"/>
-    <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="false" type="id_String" value="dhis2"/>
-    <contextParameter comment="" name="Login" prompt="Login?" promptNeeded="false" type="id_String" value="dhis"/>
-    <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="false" type="id_Password" value="XN8p6O4/8gE="/>
-    <contextParameter comment="" name="Schema" prompt="Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Server" prompt="ETL_Server?" promptNeeded="false" type="id_String" value="172.18.0.5"/>
-    <contextParameter comment="" name="ETL_Login" prompt="ETL_Login?" promptNeeded="false" type="id_String" value="dhis"/>
-    <contextParameter comment="" name="ETL_Schema" prompt="ETL_Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Password" prompt="ETL_Password?" promptNeeded="false" type="id_Password" value="XN8p6O4/8gE="/>
-    <contextParameter comment="" name="ETL_Port" prompt="ETL_Port?" promptNeeded="false" type="id_String" value="5432"/>
-    <contextParameter comment="" name="ETL_Database" prompt="ETL_Database?" promptNeeded="false" type="id_String" value="etl"/>
-  </context>
+  <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>

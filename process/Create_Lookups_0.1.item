@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="ETL_Server" prompt="ETL_Server?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Login" prompt="ETL_Login?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Schema" prompt="ETL_Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Port" prompt="ETL_Port?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="ETL_Password" prompt="ETL_Password?" promptNeeded="false" type="id_Password" value=""/>
-    <contextParameter comment="" name="ETL_Database" prompt="ETL_Database?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="arv_drugs_FieldSeparator" prompt="arv_drugs_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
-    <contextParameter comment="" name="arv_drugs_File" prompt="arv_drugs_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/arv_drugs.csv"/>
-    <contextParameter comment="" name="arv_drugs_Encoding" prompt="arv_drugs_Encoding?" promptNeeded="false" type="id_String" value="US-ASCII"/>
-    <contextParameter comment="" name="arv_drugs_RowSeparator" prompt="arv_drugs_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
-    <contextParameter comment="" name="alerts_File" prompt="alerts_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/alerts.csv"/>
-    <contextParameter comment="" name="alerts_RowSeparator" prompt="alerts_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
-    <contextParameter comment="" name="alerts_Encoding" prompt="alerts_Encoding?" promptNeeded="false" type="id_String" value="UTF-8"/>
-    <contextParameter comment="" name="alerts_FieldSeparator" prompt="alerts_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
-    <contextParameter comment="" name="ARV_status_loockup_File" prompt="ARV_status_loockup_File?" promptNeeded="false" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/ARV_status_loockup.csv"/>
-    <contextParameter comment="" name="ARV_status_loockup_Encoding" prompt="ARV_status_loockup_Encoding?" promptNeeded="false" type="id_String" value="UTF-8"/>
-    <contextParameter comment="" name="ARV_status_loockup_RowSeparator" prompt="ARV_status_loockup_RowSeparator?" promptNeeded="false" type="id_String" value="&quot;\n&quot;"/>
-    <contextParameter comment="" name="ARV_status_loockup_FieldSeparator" prompt="ARV_status_loockup_FieldSeparator?" promptNeeded="false" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="alerts_File" prompt="alerts_File?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/alerts.csv"/>
+    <contextParameter comment="" name="alerts_RowSeparator" prompt="alerts_RowSeparator?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="alerts_Encoding" prompt="alerts_Encoding?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_String" value="UTF-8"/>
+    <contextParameter comment="" name="alerts_FieldSeparator" prompt="alerts_FieldSeparator?" promptNeeded="false" repositoryContextId="_m9HfkJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="arv_drugs_FieldSeparator" prompt="arv_drugs_FieldSeparator?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
+    <contextParameter comment="" name="arv_drugs_File" prompt="arv_drugs_File?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/arv_drugs.csv"/>
+    <contextParameter comment="" name="arv_drugs_Encoding" prompt="arv_drugs_Encoding?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_String" value="US-ASCII"/>
+    <contextParameter comment="" name="arv_drugs_RowSeparator" prompt="arv_drugs_RowSeparator?" promptNeeded="false" repositoryContextId="_vg5egJ4EEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="ARV_status_loockup_File" prompt="ARV_status_loockup_File?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_File" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/workspace/ARV_status_loockup.csv"/>
+    <contextParameter comment="" name="ARV_status_loockup_Encoding" prompt="ARV_status_loockup_Encoding?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="UTF-8"/>
+    <contextParameter comment="" name="ARV_status_loockup_RowSeparator" prompt="ARV_status_loockup_RowSeparator?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
+    <contextParameter comment="" name="ARV_status_loockup_FieldSeparator" prompt="ARV_status_loockup_FieldSeparator?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
     <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
