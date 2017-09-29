@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
-  <contextParameter comment="" name="DHISDatabase_Database" prompt="DHISDatabase_Database?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="DHISDatabase_Password" prompt="DHISDatabase_Password?" promptNeeded="false" type="id_Password" value=""/>
-  <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="DHISDatabase_Schema" prompt="DHISDatabase_Schema?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="DHISDatabase_Login" prompt="DHISDatabase_Login?" promptNeeded="false" type="id_String" value=""/>
-</talendfile:ContextType>
