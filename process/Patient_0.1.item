@@ -15,8 +15,8 @@
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="1472" show="false"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="64" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="1467" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -119,7 +119,7 @@
   </parameters>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-1408" posY="0">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
@@ -143,7 +143,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-1440" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
@@ -153,8 +153,6 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="PoLvNyVG2XWndNDdLn696A==" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q - person" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;person&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -235,7 +233,7 @@
       <column comment="" key="false" length="10" name="creator" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="19" name="date_created" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="19" name="date_created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="changed_by" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
@@ -269,7 +267,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-1152" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -285,15 +283,17 @@
       <column comment="" key="false" length="-1" name="family_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="row1.person_id " type="id_Integer"/>
         <mapperTableEntries name="given_name" expression="row3.given_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="family_name" expression="row3.family_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="gender" expression="row1.gender " type="id_String" nullable="true"/>
         <mapperTableEntries name="birthdate" expression="row1.birthdate " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="row1.date_created " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="replace">
         <mapperTableEntries name="patient_id" expression="Var.patient_id " type="id_Integer"/>
@@ -301,6 +301,7 @@
         <mapperTableEntries name="family_name" expression="Var.family_name " type="id_String" nullable="true"/>
         <mapperTableEntries name="gender" expression="Var.gender " type="id_String" nullable="true"/>
         <mapperTableEntries name="birthdate" expression="Var.birthdate " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="Var.date_created " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="person_id" type="id_Integer"/>
@@ -311,7 +312,7 @@
         <mapperTableEntries name="death_date" type="id_Date" nullable="true"/>
         <mapperTableEntries name="cause_of_death" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="creator" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="date_created" type="id_Date"/>
+        <mapperTableEntries name="date_created" type="id_Date" nullable="true"/>
         <mapperTableEntries name="changed_by" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="date_changed" type="id_Date" nullable="true"/>
         <mapperTableEntries name="voided" type="id_Boolean"/>
@@ -359,7 +360,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-1376" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -442,7 +443,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-1280" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
@@ -578,7 +579,7 @@
   </node>
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-960" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="patient_id"/>
       <elementValue elementRef="INPUT_COLUMN" value="patient_id"/>
@@ -600,6 +601,10 @@
       <elementValue elementRef="FUNCTION" value="last"/>
       <elementValue elementRef="INPUT_COLUMN" value="birthdate"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="date_created"/>
+      <elementValue elementRef="FUNCTION" value="last"/>
+      <elementValue elementRef="INPUT_COLUMN" value="date_created"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
@@ -612,11 +617,12 @@
       <column comment="" key="false" length="-1" name="family_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-704" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -633,9 +639,10 @@
       <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="st_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="row4.patient_id " type="id_Integer"/>
         <mapperTableEntries name="given_name" expression="row4.given_name " type="id_String" nullable="true"/>
@@ -644,6 +651,7 @@
         <mapperTableEntries name="birthdate" expression="row4.birthdate " type="id_Date" nullable="true"/>
         <mapperTableEntries name="patient_identifier_type_id" expression="row8.patient_identifier_type_id " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="st_id" expression="Var.patient_identifier_type_id!=0?row7.identifier:null " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="row4.date_created " type="id_Date" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="update1">
         <mapperTableEntries name="patient_id" expression="Var.patient_id  " type="id_Integer"/>
@@ -652,6 +660,7 @@
         <mapperTableEntries name="gender" expression="Var.gender  " type="id_String" nullable="true"/>
         <mapperTableEntries name="birthdate" expression="Var.birthdate  " type="id_Date" nullable="true"/>
         <mapperTableEntries name="st_id" expression="Var.st_id  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="Var.date_created " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
@@ -659,6 +668,7 @@
         <mapperTableEntries name="family_name" type="id_String" nullable="true"/>
         <mapperTableEntries name="gender" type="id_String" nullable="true"/>
         <mapperTableEntries name="birthdate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="date_created" type="id_Date" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_identifier_id" expression="" type="id_Integer"/>
@@ -700,7 +710,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-736" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_6" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -813,7 +823,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-992" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -936,7 +946,7 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-896" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
       <elementValue elementRef="INPUT_COLUMN" value="uuid"/>
@@ -1110,7 +1120,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1128,9 +1138,10 @@
       <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="st_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="national_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="update1.patient_id " type="id_Integer"/>
         <mapperTableEntries name="given_name" expression="update1.given_name " type="id_String" nullable="true"/>
@@ -1140,6 +1151,7 @@
         <mapperTableEntries name="st_id" expression="update1.st_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="patient_identifier_type_id" expression="row10.patient_identifier_type_id " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="national_id" expression="Var.patient_identifier_type_id!=0?row11.identifier:null " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="update1.date_created " type="id_Date" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="update2">
         <mapperTableEntries name="patient_id" expression="Var.patient_id  " type="id_Integer"/>
@@ -1149,6 +1161,7 @@
         <mapperTableEntries name="birthdate" expression="Var.birthdate  " type="id_Date" nullable="true"/>
         <mapperTableEntries name="st_id" expression="Var.st_id  " type="id_String" nullable="true"/>
         <mapperTableEntries name="national_id" expression="Var.national_id  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="Var.date_created " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="update1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
@@ -1157,6 +1170,7 @@
         <mapperTableEntries name="gender" type="id_String" nullable="true"/>
         <mapperTableEntries name="birthdate" type="id_Date" nullable="true"/>
         <mapperTableEntries name="st_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" type="id_Date" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row11" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_identifier_id" expression="" type="id_Integer"/>
@@ -1198,7 +1212,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-544" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -1321,7 +1335,7 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-480" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
       <elementValue elementRef="INPUT_COLUMN" value="uuid"/>
@@ -1495,7 +1509,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-256" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_7" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -1608,7 +1622,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -1627,9 +1641,10 @@
       <column comment="" key="false" length="-1" name="st_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="national_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="update2.patient_id " type="id_Integer"/>
         <mapperTableEntries name="given_name" expression="update2.given_name " type="id_String" nullable="true"/>
@@ -1640,6 +1655,7 @@
         <mapperTableEntries name="national_id" expression="update2.national_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="patient_identifier_type_id" expression="row14.patient_identifier_type_id " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="identifier" expression="Var.patient_identifier_type_id!=0?row15.identifier:null " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="update2.date_created " type="id_Date" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="update3">
         <mapperTableEntries name="patient_id" expression="Var.patient_id  " type="id_Integer"/>
@@ -1650,6 +1666,7 @@
         <mapperTableEntries name="st_id" expression="Var.st_id  " type="id_String" nullable="true"/>
         <mapperTableEntries name="national_id" expression="Var.national_id  " type="id_String" nullable="true"/>
         <mapperTableEntries name="identifier" expression="Var.identifier  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="Var.date_created " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="update2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
@@ -1659,6 +1676,7 @@
         <mapperTableEntries name="birthdate" type="id_Date" nullable="true"/>
         <mapperTableEntries name="st_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="national_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" type="id_Date" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row15" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_identifier_id" expression="" type="id_Integer"/>
@@ -1700,7 +1718,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-64" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_8" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -1823,7 +1841,7 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
       <elementValue elementRef="INPUT_COLUMN" value="uuid"/>
@@ -1997,7 +2015,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_9" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -2110,7 +2128,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-320" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2122,18 +2140,19 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="update4" name="update4">
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="given_name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="family_name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="gender" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthdate" nullable="false" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="st_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="national_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="identifier" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="motherName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="telephone" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="given_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="family_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="st_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="national_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="motherName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="update3.patient_id " type="id_Integer"/>
         <mapperTableEntries name="given_name" expression="update3.given_name " type="id_String" nullable="true"/>
@@ -2145,18 +2164,20 @@
         <mapperTableEntries name="identifier" expression="update3.identifier " type="id_String" nullable="true"/>
         <mapperTableEntries name="motherName" expression="row20.motherName " type="id_String" nullable="true"/>
         <mapperTableEntries name="telephone" expression="row20.telephone " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="update3.date_created " type="id_Date" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="update4">
         <mapperTableEntries name="patient_id" expression="Var.patient_id  " type="id_Integer"/>
-        <mapperTableEntries name="given_name" expression="Var.given_name  " type="id_String"/>
-        <mapperTableEntries name="family_name" expression="Var.family_name  " type="id_String"/>
-        <mapperTableEntries name="gender" expression="Var.gender  " type="id_String"/>
-        <mapperTableEntries name="birthdate" expression="Var.birthdate  " type="id_Date"/>
-        <mapperTableEntries name="st_id" expression="Var.st_id  " type="id_String"/>
-        <mapperTableEntries name="national_id" expression="Var.national_id  " type="id_String"/>
-        <mapperTableEntries name="identifier" expression="Var.identifier  " type="id_String"/>
-        <mapperTableEntries name="motherName" expression="Var.motherName  " type="id_String"/>
-        <mapperTableEntries name="telephone" expression="Var.telephone  " type="id_String"/>
+        <mapperTableEntries name="given_name" expression="Var.given_name  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="family_name" expression="Var.family_name  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="gender" expression="Var.gender  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="birthdate" expression="Var.birthdate  " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="st_id" expression="Var.st_id  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="national_id" expression="Var.national_id  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="identifier" expression="Var.identifier  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="motherName" expression="Var.motherName  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="telephone" expression="Var.telephone  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="Var.date_created " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="update3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
@@ -2167,6 +2188,7 @@
         <mapperTableEntries name="st_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="national_id" type="id_String" nullable="true"/>
         <mapperTableEntries name="identifier" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" type="id_Date" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row20" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="person_id" expression="update3.patient_id " type="id_Integer"/>
@@ -2177,7 +2199,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-960" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_10" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
@@ -2278,7 +2300,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-768" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2344,7 +2366,7 @@
   </node>
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-544" posY="576">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="person_id"/>
       <elementValue elementRef="INPUT_COLUMN" value="person_id"/>
@@ -2372,7 +2394,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-960" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_11" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_2"/>
@@ -2493,7 +2515,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="64" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2515,9 +2537,10 @@
       <column comment="" key="false" length="-1" name="motherName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="vih_status" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="update4.patient_id " type="id_Integer"/>
         <mapperTableEntries name="given_name" expression="update4.given_name " type="id_String" nullable="true"/>
@@ -2530,6 +2553,7 @@
         <mapperTableEntries name="motherName" expression="update4.motherName " type="id_String" nullable="true"/>
         <mapperTableEntries name="telephone" expression="update4.telephone " type="id_String" nullable="true"/>
         <mapperTableEntries name="vih_status" expression="row16.vih_status!=null?row16.vih_status:0" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="update4.date_created " type="id_Date" nullable="true"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="result">
         <mapperTableEntries name="patient_id" expression="Var.patient_id " type="id_Integer"/>
@@ -2543,18 +2567,20 @@
         <mapperTableEntries name="motherName" expression="Var.motherName " type="id_String" nullable="true"/>
         <mapperTableEntries name="telephone" expression="Var.telephone " type="id_String" nullable="true"/>
         <mapperTableEntries name="vih_status" expression="Var.vih_status " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="date_created" expression="Var.date_created " type="id_Date" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="update4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
-        <mapperTableEntries name="given_name" type="id_String"/>
-        <mapperTableEntries name="family_name" type="id_String"/>
-        <mapperTableEntries name="gender" type="id_String"/>
-        <mapperTableEntries name="birthdate" type="id_Date"/>
-        <mapperTableEntries name="st_id" type="id_String"/>
-        <mapperTableEntries name="national_id" type="id_String"/>
-        <mapperTableEntries name="identifier" type="id_String"/>
-        <mapperTableEntries name="motherName" type="id_String"/>
-        <mapperTableEntries name="telephone" type="id_String"/>
+        <mapperTableEntries name="given_name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="family_name" type="id_String" nullable="true"/>
+        <mapperTableEntries name="gender" type="id_String" nullable="true"/>
+        <mapperTableEntries name="birthdate" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="st_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="national_id" type="id_String" nullable="true"/>
+        <mapperTableEntries name="identifier" type="id_String" nullable="true"/>
+        <mapperTableEntries name="motherName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="telephone" type="id_String" nullable="true"/>
+        <mapperTableEntries name="date_created" type="id_Date" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row16" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" expression="update4.patient_id " type="id_Integer"/>
@@ -2564,7 +2590,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_12" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -2682,7 +2708,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="192" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -2745,7 +2771,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="6" offsetLabelY="8" posX="352" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_13" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -2853,7 +2879,7 @@
   </node>
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TABLE" name="GROUPBYS">
       <elementValue elementRef="OUTPUT_COLUMN" value="patient_id"/>
       <elementValue elementRef="INPUT_COLUMN" value="patient_id"/>
@@ -2876,7 +2902,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -2911,28 +2937,31 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="vih_status"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date_created"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="Patient"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="result" name="tLogRow_1">
-      <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="given_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="family_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="st_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="national_id" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="motherName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="telephone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="vih_status" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="given_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="family_name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="gender" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="birthdate" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="st_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="national_id" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="identifier" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="motherName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="telephone" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="vih_status" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="640">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/installed/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_7pd4oJFoEeeAQb-7B06LBA" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -3018,6 +3047,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date_created"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
@@ -3037,6 +3071,7 @@
       <column comment="" key="false" length="-1" name="motherName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="telephone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="vih_status" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="result" name="REJECT">
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
@@ -3050,6 +3085,7 @@
       <column comment="" key="false" length="-1" name="motherName" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="telephone" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="vih_status" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_created" nullable="true" pattern="" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -3132,6 +3168,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="birthdate"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3254,6 +3293,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="birthdate"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
@@ -3276,6 +3318,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="st_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3468,6 +3513,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="national_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3663,6 +3711,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="identifier"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -3866,6 +3917,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="telephone"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="update4" show="false"/>
@@ -4035,6 +4089,9 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="vih_status"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_created"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
