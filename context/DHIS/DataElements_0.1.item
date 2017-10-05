@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
   <contextParameter comment="" name="numberOfPatientsBySex" prompt="numberOfPatientsBySex?" promptNeeded="false" type="id_String" value="InOIiGxsAnu"/>
-  <contextParameter comment="" name="numberPatientReceivingARVByPeriod" prompt="numberPatientReceivingARVByPeriod?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="numberPatientReceivingARVByPeriod" prompt="numberPatientReceivingARVByPeriod?" promptNeeded="false" type="id_String" value="U1vcxpYZy3X"/>
+  <contextParameter comment="" name="numberVisitsByPregnantWomenToTheClinic" prompt="numberVisitsByPregnantWomenToTheClinic?" promptNeeded="false" type="id_String" value="JdafRhccp3O"/>
+  <contextParameter comment="" name="numberPregnancyWomenHadPrenatalCons" prompt="numberPregnancyWomenHadPrenatalCons?" promptNeeded="false" type="id_String" value="F7ZbjL5dJ6M"/>
+  <contextParameter comment="" name="numberPregnancyWomenHivTested" prompt="numberPregnancyWomenHivTested?" promptNeeded="false" type="id_String" value="QOIRjf8QgyL"/>
+  <contextParameter comment="" name="pregnancyWomenTestedForSyphilis" prompt="pregnancyWomenTestedForSyphilis?" promptNeeded="false" type="id_String" value="ZBbfRXKSBdZ"/>
 </talendfile:ContextType>

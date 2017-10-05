@@ -2,10 +2,11 @@
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
   <contextParameter comment="" name="male" prompt="male?" promptNeeded="false" type="id_String" value="BjwuDGqJwWH"/>
   <contextParameter comment="" name="female" prompt="female?" promptNeeded="false" type="id_String" value="YmmkE6FD3my"/>
-  <contextParameter comment="" name="days0_30" prompt="days0_30?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="days31_60" prompt="days31_60?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="days61_90" prompt="days61_90?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="days91_120" prompt="days91_120?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter comment="" name="daysMoreThen120" prompt="daysMoreThen120?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="days0_30" prompt="days0_30?" promptNeeded="false" type="id_String" value="XKYt4TJ9XCO"/>
+  <contextParameter comment="" name="days31_60" prompt="days31_60?" promptNeeded="false" type="id_String" value="G2mnsHyVVSd"/>
+  <contextParameter comment="" name="days61_90" prompt="days61_90?" promptNeeded="false" type="id_String" value="xBN9ohifASm"/>
+  <contextParameter comment="" name="days91_120" prompt="days91_120?" promptNeeded="false" type="id_String" value="LSOn6gW0uo4"/>
+  <contextParameter comment="" name="daysMoreThan120" prompt="daysMoreThan120?" promptNeeded="false" type="id_String" value="lYdeitMbe5x"/>
   <contextParameter comment="" name="uniquePatients" prompt="uniquePatients?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="Total" prompt="Total?" promptNeeded="false" type="id_String" value="GiBSEXO5lzA"/>
 </talendfile:ContextType>
