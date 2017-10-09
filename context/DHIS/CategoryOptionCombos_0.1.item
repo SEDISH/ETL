@@ -9,4 +9,18 @@
   <contextParameter comment="" name="daysMoreThan120" prompt="daysMoreThan120?" promptNeeded="false" type="id_String" value="lYdeitMbe5x"/>
   <contextParameter comment="" name="uniquePatients" prompt="uniquePatients?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter comment="" name="Total" prompt="Total?" promptNeeded="false" type="id_String" value="GiBSEXO5lzA"/>
+  <contextParameter comment="" name="age0_14" prompt="age0_14?" promptNeeded="false" type="id_String" value="c1AFgaHGDoG"/>
+  <contextParameter comment="" name="age15_20" prompt="age15_20?" promptNeeded="false" type="id_String" value="XEGlwBunatS"/>
+  <contextParameter comment="" name="age21_30" prompt="age21_30?" promptNeeded="false" type="id_String" value="PigpadWH4Nn"/>
+  <contextParameter comment="" name="age31_40" prompt="age31_40?" promptNeeded="false" type="id_String" value="A2r74rKsGwQ"/>
+  <contextParameter comment="" name="age41_50" prompt="age41_50?" promptNeeded="false" type="id_String" value="TaWZ3czmxF8"/>
+  <contextParameter comment="" name="age51_60" prompt="age51_60?" promptNeeded="false" type="id_String" value="jAG15dapD5k"/>
+  <contextParameter comment="" name="age61_70" prompt="age61_70?" promptNeeded="false" type="id_String" value="d1NGudxDK7i"/>
+  <contextParameter comment="" name="age71_80" prompt="age71_80?" promptNeeded="false" type="id_String" value="mBlDwtMRgNJ"/>
+  <contextParameter comment="" name="age81_90" prompt="age81_90?" promptNeeded="false" type="id_String" value="CDljgqOMDly"/>
+  <contextParameter comment="" name="age91_100" prompt="age91_100?" promptNeeded="false" type="id_String" value="fFFlN2iE8jw"/>
+  <contextParameter comment="" name="age101_110" prompt="age101_110?" promptNeeded="false" type="id_String" value="IN5NTSAA6tB"/>
+  <contextParameter comment="" name="age111_120" prompt="age111_120?" promptNeeded="false" type="id_String" value="N2eSGW6TmQF"/>
+  <contextParameter comment="" name="age121_130" prompt="age121_130?" promptNeeded="false" type="id_String" value="AmoXCCwRKmE"/>
+  <contextParameter comment="" name="moreThan130" prompt="moreThan130?" promptNeeded="false" type="id_String" value="OG6Zjl6xGhw"/>
 </talendfile:ContextType>
