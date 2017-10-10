@@ -6,9 +6,9 @@
   <contextParameter comment="" name="numberPregnancyWomenHadPrenatalCons" prompt="numberPregnancyWomenHadPrenatalCons?" promptNeeded="false" type="id_String" value="F7ZbjL5dJ6M"/>
   <contextParameter comment="" name="numberPregnancyWomenHivTested" prompt="numberPregnancyWomenHivTested?" promptNeeded="false" type="id_String" value="QOIRjf8QgyL"/>
   <contextParameter comment="" name="pregnancyWomenTestedForSyphilis" prompt="pregnancyWomenTestedForSyphilis?" promptNeeded="false" type="id_String" value="ZBbfRXKSBdZ"/>
-  <contextParameter comment="" name="numberInfantsFromMotherOnProphylaxis" prompt="numberInfantsFromMotherOnProphylaxis?" promptNeeded="false" type="id_String" value="VJerPEgdSX3"/>
-  <contextParameter comment="" name="numberPrenancyWomenVihPositive" prompt="numberPrenancyWomenVihPositive?" promptNeeded="false" type="id_String" value="b2eixE2UrRG"/>
-  <contextParameter comment="" name="numberPrenatalVisitBySite" prompt="numberPrenatalVisitBySite?" promptNeeded="false" type="id_String" value="nWxMCDOzaNt"/>
+  <contextParameter comment="" name="NumberVisitsbyMonth" prompt="NumberVisitsbyMonth?" promptNeeded="false" type="id_String" value="eLDI9PYUYiy"/>
+  <contextParameter comment="" name="numberPregnancyWomenHivPositive" prompt="numberPregnancyWomenHivPositive?" promptNeeded="false" type="id_String" value="b2eixE2UrRG"/>
+  <contextParameter comment="" name="numberWomenSeenFirstPrenatalVisitFirstTrimester" prompt="numberWomenSeenFirstPrenatalVisitFirstTrimester?" promptNeeded="false" type="id_String" value="iebBqxGY741"/>
+  <contextParameter comment="" name="firstVisitAge" prompt="firstVisitAge?" promptNeeded="false" type="id_String" value="zmF0v3LSONu"/>
   <contextParameter comment="" name="patientAgeGroup" prompt="patientAgeGroup?" promptNeeded="false" type="id_String" value="MSIQNlCu0Uh"/>
-  <contextParameter comment="" name="numberPatientByStatus" prompt="numberPatientByStatus?" promptNeeded="false" type="id_String" value="er24JdhJwjD"/>
 </talendfile:ContextType>
