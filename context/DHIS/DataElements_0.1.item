@@ -11,4 +11,9 @@
   <contextParameter comment="" name="numberWomenSeenFirstPrenatalVisitFirstTrimester" prompt="numberWomenSeenFirstPrenatalVisitFirstTrimester?" promptNeeded="false" type="id_String" value="iebBqxGY741"/>
   <contextParameter comment="" name="firstVisitAge" prompt="firstVisitAge?" promptNeeded="false" type="id_String" value="zmF0v3LSONu"/>
   <contextParameter comment="" name="patientAgeGroup" prompt="patientAgeGroup?" promptNeeded="false" type="id_String" value="MSIQNlCu0Uh"/>
+  <contextParameter comment="" name="numberExposedInfantsConfirmedHiv" prompt="numberExposedInfantsConfirmedHiv?" promptNeeded="false" type="id_String" value="eq6KOwtMNxp"/>
+  <contextParameter comment="" name="numberInfantsFromMotherOnProphylaxis" prompt="numberInfantsFromMotherOnProphylaxis?" promptNeeded="false" type="id_String" value="VJerPEgdSX3"/>
+  <contextParameter comment="" name="numberExposedInfantsTestedbyPcr" prompt="numberExposedInfantsTestedbyPcr?" promptNeeded="false" type="id_String" value="BkXgePY2B8y"/>
+  <contextParameter comment="" name="numberHivWomenGaveBirthAtHospital" prompt="numberHivWomenGaveBirthAtHospital?" promptNeeded="false" type="id_String" value="oQcxcxY8koi"/>
+  <contextParameter comment="" name="ExposedInfantsRegisterInPtmeProgram" prompt="ExposedInfantsRegisterInPtmeProgram?" promptNeeded="false" type="id_String" value="VYWeWjdYyfY"/>
 </talendfile:ContextType>
