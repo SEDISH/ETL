@@ -23,4 +23,14 @@
   <contextParameter comment="" name="age111_120" prompt="age111_120?" promptNeeded="false" type="id_String" value="N2eSGW6TmQF"/>
   <contextParameter comment="" name="age121_130" prompt="age121_130?" promptNeeded="false" type="id_String" value="AmoXCCwRKmE"/>
   <contextParameter comment="" name="moreThan130" prompt="moreThan130?" promptNeeded="false" type="id_String" value="OG6Zjl6xGhw"/>
+  <contextParameter comment="" name="prenatal_1" prompt="prenatal_1?" promptNeeded="false" type="id_String" value="nqKuufIauMT"/>
+  <contextParameter comment="" name="prenatal_2" prompt="prenatal_2?" promptNeeded="false" type="id_String" value="wsjaSFgvsbe"/>
+  <contextParameter comment="" name="prenatal_3" prompt="prenatal_3?" promptNeeded="false" type="id_String" value="SUk8M0l3Uu0"/>
+  <contextParameter comment="" name="prenatal_4" prompt="prenatal_4?" promptNeeded="false" type="id_String" value="HzDKFjvs4q8"/>
+  <contextParameter comment="" name="Nouveau_Patient_VIH" prompt="Nouveau_Patient_VIH?" promptNeeded="false" type="id_String" value="HtHMxWFa0ZO"/>
+  <contextParameter comment="" name="Nouveau_Patient_Non_VIH" prompt="Nouveau_Patient_Non_VIH?" promptNeeded="false" type="id_String" value="GPMeqcqFR6H"/>
+  <contextParameter comment="" name="Nouveau_Patient" prompt="Nouveau_Patient?" promptNeeded="false" type="id_String" value="dNQ5Qd5Ypu6"/>
+  <contextParameter comment="" name="Patient_VIH" prompt="Patient_VIH?" promptNeeded="false" type="id_String" value="jCChsvPa8ku"/>
+  <contextParameter comment="" name="Patient_Non_VIH" prompt="Patient_Non_VIH?" promptNeeded="false" type="id_String" value="o0DVZV8QhCD"/>
+  <contextParameter comment="" name="Total_Patient" prompt="Total_Patient?" promptNeeded="false" type="id_String" value="KI7XSbYybHF"/>
 </talendfile:ContextType>

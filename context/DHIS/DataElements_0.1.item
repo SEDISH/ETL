@@ -16,4 +16,8 @@
   <contextParameter comment="" name="numberExposedInfantsTestedbyPcr" prompt="numberExposedInfantsTestedbyPcr?" promptNeeded="false" type="id_String" value="BkXgePY2B8y"/>
   <contextParameter comment="" name="numberHivWomenGaveBirthAtHospital" prompt="numberHivWomenGaveBirthAtHospital?" promptNeeded="false" type="id_String" value="oQcxcxY8koi"/>
   <contextParameter comment="" name="ExposedInfantsRegisterInPtmeProgram" prompt="ExposedInfantsRegisterInPtmeProgram?" promptNeeded="false" type="id_String" value="VYWeWjdYyfY"/>
+  <contextParameter comment="" name="frequencyPrenatalVisitsPerPatient" prompt="frequencyPrenatalVisitsPerPatient?" promptNeeded="false" type="id_String" value="QUAy1Pp8ul0"/>
+  <contextParameter comment="" name="institutionFrequenting" prompt="institutionFrequenting?" promptNeeded="false" type="id_String" value="p8XJAdMAnry"/>
+  <contextParameter comment="" name="numberPregnantWomenDiagnosedSyphilis" prompt="numberPregnantWomenDiagnosedSyphilis?" promptNeeded="false" type="id_String" value="tTw3Cu1qUBv"/>
+  <contextParameter comment="" name="pregnancyWomenOnHaart" prompt="pregnancyWomenOnHaart?" promptNeeded="false" type="id_String" value="mYjm31nugeK"/>
 </talendfile:ContextType>
