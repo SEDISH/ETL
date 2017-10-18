@@ -2,7 +2,7 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="Total" prompt="Total?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="GiBSEXO5lzA"/>
-    <contextParameter comment="" name="meds" prompt="meds?" promptNeeded="false" repositoryContextId="_9CKNUKHkEeeNU-T51tLLfw" type="id_String" value="eg15Ck2X6lv"/>
+    <contextParameter comment="" name="alertReport" prompt="alertReport?" promptNeeded="false" repositoryContextId="_9CKNUKHkEeeNU-T51tLLfw" type="id_String" value="gnIJdu9W4ly"/>
     <contextParameter comment="" name="DHISLogin" prompt="DHISLogin?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISPassword" prompt="DHISPassword?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_Password" value=""/>
     <contextParameter comment="" name="DHISUrl" prompt="DHISUrl?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value=""/>
@@ -19,12 +19,6 @@
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="Haiti" prompt="Haiti?" promptNeeded="false" repositoryContextId="_m8cd8KHlEeeNU-T51tLLfw" type="id_String" value="a7SxSzggwzc"/>
-    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -129,8 +123,32 @@
     <routinesParameter id="_kE-VMIdEEeenS971md0LTw" name="TalendDate"/>
     <routinesParameter id="_kE_jUIdEEeenS971md0LTw" name="TalendString"/>
   </parameters>
-  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_wP7egI48Eeee_MuZE03cLw" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
+    <elementParameter field="TEXT" name="HOST" value="context.DHISDatabase_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="context.DHISDatabase_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.DHISDatabase_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DHISDatabase_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.DHISDatabase_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf9FjhftEmLI4ApmcWIqJy7opXI0YMT3R8="/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="DHISDatabase"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_2" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_7pd4oJFoEeeAQb-7B06LBA" show="false"/>
@@ -153,11 +171,11 @@
     <elementParameter field="TEXT" name="LABEL" value="ETLDatabase"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -171,7 +189,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;select drug_id&#xA;FROM patient_prescription&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;select al.libelle as Alert &#xA;FROM alert a, alert_lookup al&#xA;WHERE a.alert_id=al.id&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -182,145 +200,21 @@
     <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="drug_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_2">
-      <column comment="" key="false" length="19" name="drug_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_3-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="agg" name="agg">
-      <column comment="" key="false" length="-1" name="name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="shortName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="aggregationType" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="domainType" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valueType" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="aggregationType" expression="&quot;SUM&quot;" type="id_String"/>
-        <mapperTableEntries name="domainType" expression="&quot;AGGREGATE&quot;" type="id_String"/>
-        <mapperTableEntries name="valueType" expression="&quot;INTEGER&quot;" type="id_String"/>
-        <mapperTableEntries name="shortName" expression="row22.name!=null&amp;&amp;row22.name.contains(&quot; &quot;)?StringHandling.LEFT(row22.name,StringHandling.INDEX(row22.name,&quot; &quot;)):row22.name" type="id_String"/>
-      </varTables>
-      <outputTables sizeState="INTERMEDIATE" name="agg">
-        <mapperTableEntries name="name" expression="row22.name    " type="id_String"/>
-        <mapperTableEntries name="shortName" expression="Var.shortName     " type="id_String"/>
-        <mapperTableEntries name="aggregationType" expression="Var.aggregationType     " type="id_String"/>
-        <mapperTableEntries name="domainType" expression="Var.domainType     " type="id_String"/>
-        <mapperTableEntries name="valueType" expression="Var.valueType     " type="id_String"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="drug_id" type="id_Integer" nullable="true"/>
-      </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row22" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="name" type="id_String" nullable="true"/>
-        <mapperTableEntries name="concept_id" expression="row4.drug_id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="locale" expression="&quot;fr&quot;" type="id_String" nullable="true"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select name, concept_id,locale&#xA;FROM concept_name&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="concept_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="locale"/>
-      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMysqlInput_1">
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="concept_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locale" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_1">
+      <column comment="" key="false" length="19" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="name"/>
-      <elementValue elementRef="INPUT_COLUMN" value="name"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="shortName"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="shortName"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="aggregationType"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="aggregationType"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="domainType"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="domainType"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="valueType"/>
-      <elementValue elementRef="FUNCTION" value="first"/>
-      <elementValue elementRef="INPUT_COLUMN" value="valueType"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ma" name="tAggregateRow_1">
-      <column comment="" key="false" length="-1" name="name" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="shortName" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="aggregationType" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="domainType" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="valueType" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_cBj-gLPdEeeBcupDsCgFFw-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
@@ -339,36 +233,37 @@
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="aggregationType" expression="&quot;SUM&quot;" type="id_String"/>
+        <mapperTableEntries name="domainType" expression="&quot;AGGREGATE&quot;" type="id_String"/>
+        <mapperTableEntries name="valueType" expression="&quot;INTEGER&quot;" type="id_String"/>
+        <mapperTableEntries name="shortName" expression="row4.name!=null&amp;&amp;row4.name.contains(&quot; &quot;)?StringHandling.LEFT(row4.name,StringHandling.INDEX(row4.name,&quot; &quot;)):row4.name " type="id_String"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="dataelement" activateCondensedTool="true" rejectInnerJoin="true">
-        <mapperTableEntries name="name" expression="row23.name " type="id_String"/>
-        <mapperTableEntries name="shortName" expression="row23.shortName " type="id_String"/>
-        <mapperTableEntries name="aggregationType" expression="row23.aggregationType " type="id_String"/>
-        <mapperTableEntries name="domainType" expression="row23.domainType " type="id_String"/>
-        <mapperTableEntries name="valueType" expression="row23.valueType " type="id_String"/>
+        <mapperTableEntries name="name" expression="row4.name " type="id_String"/>
+        <mapperTableEntries name="shortName" expression="Var.shortName " type="id_String"/>
+        <mapperTableEntries name="aggregationType" expression="Var.aggregationType " type="id_String"/>
+        <mapperTableEntries name="domainType" expression="Var.domainType " type="id_String"/>
+        <mapperTableEntries name="valueType" expression="Var.valueType " type="id_String"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="temp">
         <mapperTableEntries name="name" expression="row5.name  " type="id_String" nullable="true"/>
         <mapperTableEntries name="uid" expression="row5.uid  " type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row23" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="name" type="id_String"/>
-        <mapperTableEntries name="shortName" type="id_String"/>
-        <mapperTableEntries name="aggregationType" type="id_String"/>
-        <mapperTableEntries name="domainType" type="id_String"/>
-        <mapperTableEntries name="valueType" type="id_String"/>
+      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="name" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="name" expression="row23.name " type="id_String" nullable="true"/>
+        <mapperTableEntries name="name" expression="row4.name " type="id_String" nullable="true"/>
         <mapperTableEntries name="uid" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_3" show="false"/>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -399,18 +294,18 @@
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_3">
+    <metadata connector="FLOW" name="tPostgresqlInput_2">
       <column comment="" key="false" length="19" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="128">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8" show="false"/>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_8-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_cBj-gLPdEeeBcupDsCgFFw-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
@@ -430,7 +325,7 @@
       <column comment="" key="false" length="-1" name="categorycomboid" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="zeroissignificant" nullable="true" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
     </metadata>
-    <metadata connector="FLOW" name="uids">
+    <metadata connector="FLOW" name="savetemp">
       <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -453,9 +348,9 @@
         <mapperTableEntries name="categorycomboid" expression="row3.categorycomboid   " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="zeroissignificant" expression="false " type="id_Boolean" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="uids">
-        <mapperTableEntries name="name" expression="dataelement.name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="uid" expression="Var.uid " type="id_String" nullable="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="savetemp">
+        <mapperTableEntries name="name" expression="dataelement.name  " type="id_String" nullable="true"/>
+        <mapperTableEntries name="uid" expression="Var.uid  " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="dataelement" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="name" type="id_String"/>
@@ -472,11 +367,11 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1728" posY="128">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_1" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
@@ -600,11 +495,11 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_9" show="false"/>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_3" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -633,15 +528,15 @@
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_9">
+    <metadata connector="FLOW" name="tPostgresqlInput_3">
       <column comment="" key="false" length="19" name="dataelementid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="320">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_10" show="false"/>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_4" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -670,73 +565,15 @@
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_10">
+    <metadata connector="FLOW" name="tPostgresqlInput_4">
       <column comment="" key="false" length="19" name="categorycomboid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1728" posY="256">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_3" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;temp&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
-    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
-    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
-    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="uid"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlOutput_3">
-      <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="384">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
@@ -779,7 +616,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlOutput_4">
+    <metadata connector="FLOW" name="tPostgresqlOutput_3">
       <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -790,58 +627,69 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_wP7egI48Eeee_MuZE03cLw" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9"/>
-    <elementParameter field="TEXT" name="HOST" value="context.DHISDatabase_Server"/>
-    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.DHISDatabase_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.DHISDatabase_Database"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.DHISDatabase_Schema"/>
-    <elementParameter field="TEXT" name="USER" value="context.DHISDatabase_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf9FjhftEmLI4ApmcWIqJy7opXI0YMT3R8="/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="DHISDatabase"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="224">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_m0FEoI13Eeex3okkrrOB-Q" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="context.SHRDatabase_Server"/>
-    <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.SHRDatabase_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.SHRDatabase_Database"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="context.SHRDatabase_AdditionalParams"/>
-    <elementParameter field="TEXT" name="USER" value="context.SHRDatabase_Login"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kudRdJuMzS3acFQcAWC3ubkhLfW832EgKXI="/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value="" show="false"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="544">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;temp&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="USE_SPATIAL_OPTIONS" value="false"/>
+    <elementParameter field="CHECK" name="SPATIAL_INDEX" value="false" show="false"/>
+    <elementParameter field="CHECK" name="GEOMETRY_COLUMNS" value="false" show="false"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="CHECK" name="SAVE_POINT" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="uid"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlOutput_2">
+      <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_5" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -872,18 +720,18 @@
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_1">
+    <metadata connector="FLOW" name="tPostgresqlInput_5">
       <column comment="" key="true" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="true" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="672">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_cBj-gLPdEeeBcupDsCgFFw-tMap_4-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
@@ -919,9 +767,9 @@
         <mapperTableEntries name="dataelementuid" expression="row1.uid  " type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="sendvalues">
-        <mapperTableEntries name="Total" expression="count.Total       " type="id_Long"/>
+        <mapperTableEntries name="Total" expression="row6.Total       " type="id_Long"/>
         <mapperTableEntries name="period" expression="Var.var1" type="id_String"/>
-        <mapperTableEntries name="dataSet" expression="context.meds   " type="id_String"/>
+        <mapperTableEntries name="dataSet" expression="context.alertReport" type="id_String"/>
         <mapperTableEntries name="orgUnit" expression="context.Haiti     " type="id_String"/>
         <mapperTableEntries name="completeData" expression="TalendDate.getDate(&quot;CCYY-MM-DD&quot;)     " type="id_String"/>
         <mapperTableEntries name="dataElement" expression="row1.uid    " type="id_String"/>
@@ -934,17 +782,17 @@
       <inputTables sizeState="INTERMEDIATE" name="datasetid" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="datasetid" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="count" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="name" expression="row1.name " type="id_String" nullable="true"/>
         <mapperTableEntries name="Total" type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="896">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_4" show="false"/>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_7" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -975,18 +823,18 @@
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_4">
+    <metadata connector="FLOW" name="tPostgresqlInput_7">
       <column comment="" key="false" length="19" name="datasetid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="896">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_cBj-gLPdEeeBcupDsCgFFw-tMap_6-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
@@ -998,7 +846,7 @@
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="datasetid" expressionFilter="row18.uid.equals(context.meds)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="datasetid" expressionFilter="row18.uid.equals(context.alertReport)" activateExpressionFilter="true">
         <mapperTableEntries name="datasetid" expression="row18.datasetid  " type="id_Integer" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row18" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
@@ -1007,13 +855,81 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_5" show="false"/>
+  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="string"/>
+    <elementParameter field="TABLE" name="ROOT" show="false">
+      <elementValue elementRef="PATH" value="/rootTag"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="1"/>
+      <elementValue elementRef="PATH" value="/rootTag/orgUnit"/>
+      <elementValue elementRef="COLUMN" value="orgUnit"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="3"/>
+      <elementValue elementRef="PATH" value="/rootTag/completeData"/>
+      <elementValue elementRef="COLUMN" value="completeData"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="4"/>
+      <elementValue elementRef="PATH" value="/rootTag/dataValues"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="5"/>
+      <elementValue elementRef="PATH" value="class"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value="array"/>
+      <elementValue elementRef="ATTRIBUTE" value="attri"/>
+      <elementValue elementRef="ORDER" value="6"/>
+      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1"/>
+      <elementValue elementRef="COLUMN" value=""/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="7"/>
+      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1/dataElement"/>
+      <elementValue elementRef="COLUMN" value="dataElement"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="8"/>
+      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1/period"/>
+      <elementValue elementRef="COLUMN" value="period"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="9"/>
+      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1/value"/>
+      <elementValue elementRef="COLUMN" value="Total"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="branch"/>
+      <elementValue elementRef="ORDER" value="10"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="GROUP" show="false"/>
+    <elementParameter field="TABLE" name="LOOP" show="false">
+      <elementValue elementRef="PATH" value="/rootTag/dataSet"/>
+      <elementValue elementRef="COLUMN" value="dataSet"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="ATTRIBUTE" value="main"/>
+      <elementValue elementRef="ORDER" value="2"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TABLE" name="GROUPBYS"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
+    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="crossJoined" name="tWriteJSONField_1">
+      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="736">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_5-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_cBj-gLPdEeeBcupDsCgFFw-tMap_7-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
@@ -1058,51 +974,11 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="928">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_5" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;Select dataelementid,uid&#xA;FROM dataelement&#xA;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
-    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="dataelementid"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="uid"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_5">
-      <column comment="" key="false" length="19" name="dataelementid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="928">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="864">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_8" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -1135,13 +1011,109 @@
       <column comment="" key="false" length="19" name="datasetelementid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_6" show="false"/>
+  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="context.DHISUrl"/>
+    <elementParameter field="TEXT" name="PATH" value="&quot;api/dataValueSets&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
+    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/json"/>
+    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/json"/>
+    <elementParameter field="TABLE" name="QUERY"/>
+    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
+    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.DHISLogin"/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kudt/bsLlyFSf9A4PNhnMNay"/>
+    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROLE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
+    <elementParameter field="TEXT" name="CORRELATION_VALUE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="true"/>
+    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
+    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" value="false" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="false"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="true"/>
+    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true"/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
+    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
+    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
+    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
+    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_PORT" value="8080" show="false"/>
+    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="crossJoined" name="tRESTClient_1">
+      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="RESPONSE" name="RESPONSE">
+      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FAULT" name="FAULT">
+      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_9" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;Select dataelementid,uid&#xA;FROM dataelement&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="dataelementid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="uid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_9">
+      <column comment="" key="false" length="19" name="dataelementid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="736">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_8" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_cBj-gLPdEeeBcupDsCgFFw-tMap_8-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
@@ -1182,14 +1154,48 @@
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row13" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
         <mapperTableEntries name="dataelementid" expression="check.dataelementid " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="datasetid" expression="check.datasetid " type="id_Integer" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="928">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_6" show="false"/>
+  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="string"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/conflicts&quot;"/>
+    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.bills.bill.line[*]&quot;" show="false"/>
+    <elementParameter field="TABLE" name="MAPPING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DHISWarnings"/>
+      <elementValue elementRef="QUERY" value=""/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="ISARRAY" value="false"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="DHISWarnings"/>
+      <elementValue elementRef="QUERY" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_1" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tExtractJSONFields_1">
+      <column key="false" length="4048" name="DHISWarnings" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column key="false" length="4048" name="warnings" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_10" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
@@ -1203,7 +1209,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;SELECT dataelementid &#xA;FROM datasetelement&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;SELECT dataelementid,datasetid&#xA;FROM datasetelement&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1216,17 +1222,20 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="dataelementid"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="datasetid"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_6">
+    <metadata connector="FLOW" name="tPostgresqlInput_10">
       <column comment="" key="false" length="19" name="dataelementid" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="datasetid" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1600" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_2" show="false"/>
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="736">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlOutput_4" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
@@ -1299,7 +1308,7 @@
     <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true" show="false"/>
     <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="saving" name="tPostgresqlOutput_2">
+    <metadata connector="FLOW" label="saving" name="tPostgresqlOutput_4">
       <column comment="" key="true" length="-1" name="datasetelementid" nullable="false" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="code" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -1322,281 +1331,8 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="832">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_7" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;select drug_id, COUNT(drug_id) as Total&#xA;FROM patient_prescription&#xA;GROUP BY drug_id&#xA;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
-    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="drug_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Total"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlInput_7">
-      <column comment="" key="false" length="19" name="drug_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Total" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_7" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_3o-HAK5ZEeeeZtH1SbvtpA-tMap_7-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="count" name="count">
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Total" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="MapperData">
-      <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="count">
-        <mapperTableEntries name="name" expression="row24.name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Total" expression="row21.Total " type="id_Integer" nullable="true"/>
-      </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row21" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="drug_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="Total" type="id_Integer" nullable="true"/>
-      </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row24" activateCondensedTool="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE" innerJoin="true">
-        <mapperTableEntries name="name" type="id_String" nullable="true"/>
-        <mapperTableEntries name="concept_id" expression="row21.drug_id " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="locale" expression="&quot;fr&quot;" type="id_String" nullable="true"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="928">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select name, concept_id,locale&#xA;FROM concept_name&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
-    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="concept_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="locale"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tMysqlInput_2">
-      <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="concept_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="locale" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWriteJSONField_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="COLUMN_LIST" name="JSONFIELD" value="string"/>
-    <elementParameter field="TABLE" name="ROOT" show="false">
-      <elementValue elementRef="PATH" value="/rootTag"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="1"/>
-      <elementValue elementRef="PATH" value="/rootTag/orgUnit"/>
-      <elementValue elementRef="COLUMN" value="orgUnit"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="3"/>
-      <elementValue elementRef="PATH" value="/rootTag/completeData"/>
-      <elementValue elementRef="COLUMN" value="completeData"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="4"/>
-      <elementValue elementRef="PATH" value="/rootTag/dataValues"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="5"/>
-      <elementValue elementRef="PATH" value="class"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value="array"/>
-      <elementValue elementRef="ATTRIBUTE" value="attri"/>
-      <elementValue elementRef="ORDER" value="6"/>
-      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1"/>
-      <elementValue elementRef="COLUMN" value=""/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="7"/>
-      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1/dataElement"/>
-      <elementValue elementRef="COLUMN" value="dataElement"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="8"/>
-      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1/period"/>
-      <elementValue elementRef="COLUMN" value="period"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="9"/>
-      <elementValue elementRef="PATH" value="/rootTag/dataValues/element1/value"/>
-      <elementValue elementRef="COLUMN" value="Total"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="branch"/>
-      <elementValue elementRef="ORDER" value="10"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="GROUP" show="false"/>
-    <elementParameter field="TABLE" name="LOOP" show="false">
-      <elementValue elementRef="PATH" value="/rootTag/dataSet"/>
-      <elementValue elementRef="COLUMN" value="dataSet"/>
-      <elementValue elementRef="VALUE" value=""/>
-      <elementValue elementRef="ATTRIBUTE" value="main"/>
-      <elementValue elementRef="ORDER" value="2"/>
-    </elementParameter>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="TABLE" name="GROUPBYS"/>
-    <elementParameter field="CHECK" name="REMOVE_ROOT" value="true"/>
-    <elementParameter field="CHECK" name="COMPACT_FORMAT" value="true" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="crossJoined" name="tWriteJSONField_3">
-      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRESTClient_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="TEXT" name="URL" value="context.DHISUrl"/>
-    <elementParameter field="TEXT" name="PATH" value="&quot;api/dataValueSets&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="METHOD" value="POST"/>
-    <elementParameter field="CLOSED_LIST" name="CONTENT_TYPE" value="application/json"/>
-    <elementParameter field="CLOSED_LIST" name="ACCEPT_TYPE" value="application/json"/>
-    <elementParameter field="TABLE" name="QUERY"/>
-    <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
-    <elementParameter field="TEXT" name="SERVICE_NAMESPACE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
-    <elementParameter field="TEXT" name="AUTH_USERNAME" value="context.DHISLogin"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" value="8pW6Nmy2kudt/bsLlyFSf9A4PNhnMNay"/>
-    <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" value="false" show="false"/>
-    <elementParameter field="TEXT" name="ROLE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
-    <elementParameter field="TEXT" name="CORRELATION_VALUE" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="LOG_MESSAGES" value="true"/>
-    <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
-    <elementParameter field="CHECK" name="REDIRECT_NON_SAME_HOST" value="false" show="false"/>
-    <elementParameter field="CHECK" name="CONVERT_RESPONSE_TO_DOM" value="false"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_REQUEST" value="true"/>
-    <elementParameter field="CHECK" name="WRAP_JSON_RESPONSE" value="true"/>
-    <elementParameter field="TABLE" name="HEADERS"/>
-    <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
-    <elementParameter field="CHECK" name="DISABLE_CHUNKED_ENCODING" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_TIMEOUT" value="30"/>
-    <elementParameter field="LABEL" name="CONNECTION_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="TEXT" name="RECEIVE_TIMEOUT" value="60"/>
-    <elementParameter field="LABEL" name="RECEIVE_TIMEOUT_DESC" value="(Studio Only, See Doc for Runtime)"/>
-    <elementParameter field="CHECK" name="USE_PROXY" value="false"/>
-    <elementParameter field="TEXT" name="PROXY_HOST" value="&quot;61.163.92.4&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_PORT" value="8080" show="false"/>
-    <elementParameter field="TEXT" name="PROXY_USERNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="crossJoined" name="tRESTClient_4">
-      <column comment="" key="false" length="-1" name="string" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="RESPONSE" name="RESPONSE">
-      <column defaultValue="" key="false" length="0" name="statusCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column key="false" length="4048" name="string" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FAULT" name="FAULT">
-      <column defaultValue="" key="false" length="0" name="errorCode" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tExtractJSONFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1536" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractJSONFields_4" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="READ_BY" value="XPATH"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="JSONFIELD" value="string"/>
-    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/conflicts&quot;"/>
-    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$.bills.bill.line[*]&quot;" show="false"/>
-    <elementParameter field="TABLE" name="MAPPING">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DHISWarnings"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="NODECHECK" value="false"/>
-      <elementValue elementRef="ISARRAY" value="false"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="MAPPING_4_JSONPATH" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="DHISWarnings"/>
-      <elementValue elementRef="QUERY" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
-    <elementParameter field="TEXT" name="DESTINATION" value="tExtractJSONFields_4" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tExtractJSONFields_4">
-      <column key="false" length="4048" name="DHISWarnings" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column key="false" length="4048" name="warnings" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorJSONField" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1792" posY="640">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3" show="false"/>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -1616,83 +1352,124 @@
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_3">
+    <metadata connector="FLOW" name="tLogRow_1">
       <column key="false" length="4048" name="DHISWarnings" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tPostgresqlInput_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_6" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xA;select al.libelle as Alert, count(a.alert_id) as Total &#xA;FROM alert a, alert_lookup al&#xA;WHERE a.alert_id=al.id&#xA;GROUP BY al.libelle&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Total"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_6">
+      <column comment="" key="false" length="19" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Total" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false" show="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false" show="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false" show="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="dataelementid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="uid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="created"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastupdated"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shortname"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="valuetype"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="domaintype"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="aggregationtype"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="categorycomboid"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="zeroissignificant"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out" name="tLogRow_2">
+      <column comment="" key="true" length="-1" name="dataelementid" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="code" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastupdated" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="name" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortname" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="valuetype" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="domaintype" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="aggregationtype" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="categorycomboid" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="zeroissignificant" nullable="true" pattern="" precision="-1" sourceType="" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tPostgresqlConnection_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tMap_3">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_2" target="tPostgresqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="drug_id"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Total"/>
+      <elementValue elementRef="TRACE_COLUMN" value="name"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="agg" lineStyle="0" metaname="agg" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tAggregateRow_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="shortName"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="aggregationType"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="domainType"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="valueType"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="agg" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row22" lineStyle="8" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="concept_id"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="locale"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row22" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row23" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="shortName"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="aggregationType"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="domainType"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="valueType"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row23" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="dataelement" lineStyle="0" metaname="dataelement" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tMap_8">
+  <connection connectorName="FLOW" label="dataelement" lineStyle="0" metaname="dataelement" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tMap_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="name"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1713,7 +1490,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="dataelement" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="temp" lineStyle="0" metaname="temp" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tPostgresqlOutput_4">
+  <connection connectorName="FLOW" label="temp" lineStyle="0" metaname="temp" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tPostgresqlOutput_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="name"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1725,7 +1502,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="temp" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tPostgresqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_3" target="tMap_2">
+  <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tPostgresqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_2" target="tMap_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="name"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1737,7 +1514,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="commit" lineStyle="0" metaname="commit" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_8" target="tPostgresqlOutput_1">
+  <connection connectorName="FLOW" label="commit" lineStyle="0" metaname="commit" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_3" target="tPostgresqlOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="dataelementid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1779,7 +1556,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="commit" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="uids" lineStyle="0" metaname="uids" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_8" target="tPostgresqlOutput_3">
+  <connection connectorName="FLOW" label="savetemp" lineStyle="0" metaname="savetemp" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_3" target="tPostgresqlOutput_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="name"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1789,9 +1566,9 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="uids" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="savetemp" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tPostgresqlInput_9" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_9" target="tMap_8">
+  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tPostgresqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_3" target="tMap_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="dataelementid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1800,7 +1577,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="8" metaname="tPostgresqlInput_10" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_10" target="tMap_8">
+  <connection connectorName="FLOW" label="row3" lineStyle="8" metaname="tPostgresqlInput_4" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_4" target="tMap_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="categorycomboid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1812,16 +1589,10 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_4" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_4" target="tPostgresqlInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_3" target="tPostgresqlInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_2" target="tMysqlConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tMysqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlConnection_1" target="tPostgresqlConnection_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tPostgresqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_5" target="tMap_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="name"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1833,7 +1604,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="dataset" lineStyle="0" metaname="dataset" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tMap_5">
+  <connection connectorName="FLOW" label="dataset" lineStyle="0" metaname="dataset" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_4" target="tMap_7">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="uid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1854,7 +1625,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="dataset" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="sendvalues" lineStyle="0" metaname="sendvalues" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tWriteJSONField_3">
+  <connection connectorName="FLOW" label="sendvalues" lineStyle="0" metaname="sendvalues" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_4" target="tWriteJSONField_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="Total"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1881,7 +1652,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="sendvalues" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tPostgresqlInput_4" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_4" target="tMap_4">
+  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tMap_6">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="datasetid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1893,7 +1664,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row18" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="datasetid" lineStyle="8" metaname="datasetid" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tMap_1">
+  <connection connectorName="FLOW" label="datasetid" lineStyle="8" metaname="datasetid" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tMap_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="datasetid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1902,7 +1673,16 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="datasetid" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="check" lineStyle="0" metaname="check" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tMap_6">
+  <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tWriteJSONField_1" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_1" target="tRESTClient_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="string"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="check" lineStyle="0" metaname="check" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tMap_8">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="datasetelementid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1950,7 +1730,31 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="check" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row19" lineStyle="8" metaname="tPostgresqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_5" target="tMap_5">
+  <connection connectorName="FLOW" label="row20" lineStyle="8" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tMap_7">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="dataelementid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row20" show="false"/>
+  </connection>
+  <connection connectorName="RESPONSE" label="row16" lineStyle="0" metaname="tRESTClient_1" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_1" target="tExtractJSONFields_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="statusCode"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="body"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="string"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row19" lineStyle="8" metaname="tPostgresqlInput_9" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_9" target="tMap_7">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="categorycomboid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1962,16 +1766,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row19" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row20" lineStyle="8" metaname="tPostgresqlInput_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_8" target="tMap_5">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="dataelementid"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row20" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="saving" lineStyle="0" metaname="saving" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tPostgresqlOutput_2">
+  <connection connectorName="FLOW" label="saving" lineStyle="0" metaname="saving" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tPostgresqlOutput_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="datasetelementid"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2001,79 +1796,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="saving" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="8" metaname="tPostgresqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_6" target="tMap_6">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="dataelementid"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row21" lineStyle="0" metaname="tPostgresqlInput_7" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_7" target="tMap_7">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="drug_id"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Total"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row21" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="count" lineStyle="8" metaname="count" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tMap_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Total"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="count" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row24" lineStyle="8" metaname="tMysqlInput_2" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_2" target="tMap_7">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="concept_id"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="name"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="locale"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row24" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tWriteJSONField_3" offsetLabelX="0" offsetLabelY="0" source="tWriteJSONField_3" target="tRESTClient_4">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="string"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row15" show="false"/>
-  </connection>
-  <connection connectorName="RESPONSE" label="row16" lineStyle="0" metaname="tRESTClient_4" offsetLabelX="0" offsetLabelY="0" source="tRESTClient_4" target="tExtractJSONFields_4">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="statusCode"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="body"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="string"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tExtractJSONFields_4" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_4" target="tLogRow_3">
+  <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tExtractJSONFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractJSONFields_1" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="DHISWarnings"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2082,13 +1805,32 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17" show="false"/>
   </connection>
+  <connection connectorName="FLOW" label="row13" lineStyle="8" metaname="tPostgresqlInput_10" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_10" target="tMap_8">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="dataelementid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="datasetid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tPostgresqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_6" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="name"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Total"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -2098,12 +1840,17 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
