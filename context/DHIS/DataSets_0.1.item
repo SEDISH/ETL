@@ -2,4 +2,10 @@
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
   <contextParameter comment="" name="sampleReport" prompt="sampleReport?" promptNeeded="false" type="id_String" value="cZ15FlUppKo"/>
   <contextParameter comment="" name="meds" prompt="meds?" promptNeeded="false" type="id_String" value="eg15Ck2X6lv"/>
+  <contextParameter comment="" name="dispensingMedications" prompt="dispensingMedications?" promptNeeded="false" type="id_String" value="URfp3Jz3CpR"/>
+  <contextParameter comment="" name="alertReport" prompt="alertReport?" promptNeeded="false" type="id_String" value="gnIJdu9W4ly"/>
+  <contextParameter comment="" name="analysesLaboratoireEffectues" prompt="analysesLaboratoireEffectues?" promptNeeded="false" type="id_String" value="WBWQIole4Bp"/>
+  <contextParameter comment="" name="analysesLaboratoirePrescrites" prompt="analysesLaboratoirePrescrites?" promptNeeded="false" type="id_String" value="ykZN4jwbHaP"/>
+  <contextParameter comment="" name="hivTransmissionRisksFactor" prompt="hivTransmissionRisksFactor?" promptNeeded="false" type="id_String" value="byoG6N10TJT"/>
+  <contextParameter comment="" name="institutionFrequentingByUser" prompt="institutionFrequentingByUser?" promptNeeded="false" type="id_String" value="u2TlHgqJLiK"/>
 </talendfile:ContextType>

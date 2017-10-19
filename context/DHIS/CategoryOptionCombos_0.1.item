@@ -33,4 +33,8 @@
   <contextParameter comment="" name="Patient_VIH" prompt="Patient_VIH?" promptNeeded="false" type="id_String" value="jCChsvPa8ku"/>
   <contextParameter comment="" name="Patient_Non_VIH" prompt="Patient_Non_VIH?" promptNeeded="false" type="id_String" value="o0DVZV8QhCD"/>
   <contextParameter comment="" name="Total_Patient" prompt="Total_Patient?" promptNeeded="false" type="id_String" value="KI7XSbYybHF"/>
+  <contextParameter comment="" name="Communautaire" prompt="Communautaire?" promptNeeded="false" type="id_String" value="JXSKcC4mlxR"/>
+  <contextParameter comment="" name="Institution" prompt="Institution?" promptNeeded="false" type="id_String" value="iXdDqPnqtHo"/>
+  <contextParameter comment="" name="Patient_unique" prompt="Patient_unique?" promptNeeded="false" type="id_String" value="No8eCiKfCLG"/>
+  <contextParameter comment="" name="Pourcentage" prompt="Pourcentage?" promptNeeded="false" type="id_String" value="pD2rLwb4KzV"/>
 </talendfile:ContextType>

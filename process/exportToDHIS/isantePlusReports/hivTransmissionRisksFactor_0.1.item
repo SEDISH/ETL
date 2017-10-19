@@ -934,7 +934,7 @@
       <inputTables sizeState="INTERMEDIATE" name="datasetid" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="datasetid" type="id_Integer" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="count" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="count" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="name" expression="row1.name " type="id_String" nullable="true"/>
         <mapperTableEntries name="Total" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="period" type="id_String" nullable="true"/>
