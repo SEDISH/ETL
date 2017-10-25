@@ -21,4 +21,6 @@
   <contextParameter comment="" name="numberPregnantWomenDiagnosedSyphilis" prompt="numberPregnantWomenDiagnosedSyphilis?" promptNeeded="false" type="id_String" value="tTw3Cu1qUBv"/>
   <contextParameter comment="" name="pregnancyWomenOnHaart" prompt="pregnancyWomenOnHaart?" promptNeeded="false" type="id_String" value="mYjm31nugeK"/>
   <contextParameter comment="" name="communityArvDistribution" prompt="communityArvDistribution?" promptNeeded="false" type="id_String" value="F0ejdT1pNp5"/>
+  <contextParameter comment="" name="form" prompt="form?" promptNeeded="false" type="id_String" value="IlvC79PC18X"/>
+  <contextParameter comment="" name="patientVih" prompt="patientVih?" promptNeeded="false" type="id_String" value="qji8c53o8ST"/>
 </talendfile:ContextType>

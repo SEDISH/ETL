@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="givenName" prompt="givenName?" promptNeeded="false" type="id_String" value="uWUIkGpSMa6"/>
+  <contextParameter comment="" name="familyName" prompt="familyName?" promptNeeded="false" type="id_String" value="py0TvSTBlrr"/>
+  <contextParameter comment="" name="iSantePlusID" prompt="iSantePlusID?" promptNeeded="false" type="id_String" value="Cn9LcaW7Orr"/>
+</talendfile:ContextType>

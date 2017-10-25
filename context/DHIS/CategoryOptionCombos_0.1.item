@@ -37,4 +37,5 @@
   <contextParameter comment="" name="Institution" prompt="Institution?" promptNeeded="false" type="id_String" value="zGHX2K8FlDe"/>
   <contextParameter comment="" name="Patient_unique" prompt="Patient_unique?" promptNeeded="false" type="id_String" value="SjwhEeDcIjy"/>
   <contextParameter comment="" name="Pourcentage" prompt="Pourcentage?" promptNeeded="false" type="id_String" value="kMDx3o0ivww"/>
+  <contextParameter comment="" name="Default" prompt="Default?" promptNeeded="false" type="id_String" value="HllvX50cXC0"/>
 </talendfile:ContextType>
