@@ -23,4 +23,8 @@
   <contextParameter comment="" name="communityArvDistribution" prompt="communityArvDistribution?" promptNeeded="false" type="id_String" value="F0ejdT1pNp5"/>
   <contextParameter comment="" name="form" prompt="form?" promptNeeded="false" type="id_String" value="IlvC79PC18X"/>
   <contextParameter comment="" name="patientVih" prompt="patientVih?" promptNeeded="false" type="id_String" value="qji8c53o8ST"/>
+  <contextParameter comment="" name="site_code" prompt="site_code?" promptNeeded="false" type="id_String" value="BruXV0FD2XS"/>
+  <contextParameter comment="" name="national_code" prompt="national_code?" promptNeeded="false" type="id_String" value="bzpXF1yVV74"/>
+  <contextParameter comment="" name="daniere_date" prompt="daniere_date?" promptNeeded="false" type="id_String" value="ofp7LiAyMsW"/>
+  <contextParameter comment="" name="name" prompt="name?" promptNeeded="false" type="id_String" value="LxhqdExyea0"/>
 </talendfile:ContextType>

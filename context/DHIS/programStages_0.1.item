@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
   <contextParameter comment="" name="Visit" prompt="Visit?" promptNeeded="false" type="id_String" value="ev25AqGJkAk"/>
+  <contextParameter comment="" name="hiv_patient_with_activity_after_disc_stage" prompt="hiv_patient_with_activity_after_disc_stage?" promptNeeded="false" type="id_String" value="rN1j8bJNlev"/>
 </talendfile:ContextType>
