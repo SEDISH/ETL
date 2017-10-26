@@ -27,4 +27,8 @@
   <contextParameter comment="" name="national_code" prompt="national_code?" promptNeeded="false" type="id_String" value="bzpXF1yVV74"/>
   <contextParameter comment="" name="daniere_date" prompt="daniere_date?" promptNeeded="false" type="id_String" value="ofp7LiAyMsW"/>
   <contextParameter comment="" name="name" prompt="name?" promptNeeded="false" type="id_String" value="LxhqdExyea0"/>
+  <contextParameter comment="" name="gender" prompt="gender?" promptNeeded="false" type="id_String" value="vHkw3Habii4"/>
+  <contextParameter comment="" name="age" prompt="age?" promptNeeded="false" type="id_String" value="uSSFtn7oU2n"/>
+  <contextParameter comment="" name="date_visite" prompt="date_visite?" promptNeeded="false" type="id_String" value="VT5fvNKFHr7"/>
+  <contextParameter comment="" name="date_de_discontinuation" prompt="date_de_discontinuation?" promptNeeded="false" type="id_String" value="FVRCqcG8gZs"/>
 </talendfile:ContextType>

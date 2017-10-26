@@ -2,4 +2,6 @@
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
   <contextParameter comment="" name="consultation" prompt="consultation?" promptNeeded="false" type="id_String" value="Rnvvg6utP5O"/>
   <contextParameter comment="" name="hiv_patient_with_activity_after_disc" prompt="hiv_patient_with_activity_after_disc?" promptNeeded="false" type="id_String" value="mfyC6GCw1IH"/>
+  <contextParameter comment="" name="hiv_patient_without_first_visit" prompt="hiv_patient_without_first_visit?" promptNeeded="false" type="id_String" value="lV4LM75LrPt"/>
+  <contextParameter comment="" name="list_pregnancy_women_receiving_in_clinic" prompt="list_pregnancy_women_receiving_in_clinic?" promptNeeded="false" type="id_String" value="mBMK6RRLKEZ"/>
 </talendfile:ContextType>
