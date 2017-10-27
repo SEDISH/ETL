@@ -31,4 +31,7 @@
   <contextParameter comment="" name="age" prompt="age?" promptNeeded="false" type="id_String" value="uSSFtn7oU2n"/>
   <contextParameter comment="" name="date_visite" prompt="date_visite?" promptNeeded="false" type="id_String" value="VT5fvNKFHr7"/>
   <contextParameter comment="" name="date_de_discontinuation" prompt="date_de_discontinuation?" promptNeeded="false" type="id_String" value="FVRCqcG8gZs"/>
+  <contextParameter comment="" name="date_de_naissance" prompt="date_de_naissance?" promptNeeded="false" type="id_String" value="XY1yClztxCG"/>
+  <contextParameter comment="" name="date_de_dispensation" prompt="date_de_dispensation?" promptNeeded="false" type="id_String" value="wyq5jC0iOBR"/>
+  <contextParameter comment="" name="status_de_patient" prompt="status_de_patient?" promptNeeded="false" type="id_String" value="ZffT4ZES0dI"/>
 </talendfile:ContextType>
