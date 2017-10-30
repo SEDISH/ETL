@@ -9,4 +9,7 @@
   <contextParameter comment="" name="patientStartingArv" prompt="patientStartingArv?" promptNeeded="false" type="id_String" value="ewmeREcqCmN"/>
   <contextParameter comment="" name="patientWithCompleteTbTreatment" prompt="patientWithCompleteTbTreatment?" promptNeeded="false" type="id_String" value="Bq4Kvi5KbiP"/>
   <contextParameter comment="" name="patientWithOnlyRegisterForm" prompt="patientWithOnlyRegisterForm?" promptNeeded="false" type="id_String" value="Lh9TkmcZf4a"/>
+  <contextParameter comment="" name="patientStatus" prompt="patientStatus?" promptNeeded="false" type="id_String" value="x2NBbIpHohD"/>
+  <contextParameter comment="" name="patientsCrachatAnormalWithoutTbDiagnostic" prompt="patientsCrachatAnormalWithoutTbDiagnostic?" promptNeeded="false" type="id_String" value="YGM3lpPPIYR"/>
+  <contextParameter comment="" name="patientsWithTbDiagnosticWithoutTreatment" prompt="patientsWithTbDiagnosticWithoutTreatment?" promptNeeded="false" type="id_String" value="UKY8mfGtAB9"/>
 </talendfile:ContextType>
