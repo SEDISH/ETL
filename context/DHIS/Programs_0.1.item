@@ -12,4 +12,7 @@
   <contextParameter comment="" name="patientStatus" prompt="patientStatus?" promptNeeded="false" type="id_String" value="x2NBbIpHohD"/>
   <contextParameter comment="" name="patientsCrachatAnormalWithoutTbDiagnostic" prompt="patientsCrachatAnormalWithoutTbDiagnostic?" promptNeeded="false" type="id_String" value="YGM3lpPPIYR"/>
   <contextParameter comment="" name="patientsWithTbDiagnosticWithoutTreatment" prompt="patientsWithTbDiagnosticWithoutTreatment?" promptNeeded="false" type="id_String" value="UKY8mfGtAB9"/>
+  <contextParameter comment="" name="visitNextFourteenDays" prompt="visitNextFourteenDays?" promptNeeded="false" type="id_String" value="rCJQM1bvXYm"/>
+  <contextParameter comment="" name="visitNextSevenDays" prompt="visitNextSevenDays?" promptNeeded="false" type="id_String" value="iTlI6sz0KWM"/>
+  <contextParameter comment="" name="patientsWithTbSymptomWithoutCrachat" prompt="patientsWithTbSymptomWithoutCrachat?" promptNeeded="false" type="id_String" value="WtqzJo2yynQ"/>
 </talendfile:ContextType>

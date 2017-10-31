@@ -37,4 +37,6 @@
   <contextParameter comment="" name="contact" prompt="contact?" promptNeeded="false" type="id_String" value="EhQ157ZZMny"/>
   <contextParameter comment="" name="raison_de_discontinuation" prompt="raison_de_discontinuation?" promptNeeded="false" type="id_String" value="BaofPATSdwD"/>
   <contextParameter comment="" name="telephone" prompt="telephone?" promptNeeded="false" type="id_String" value="uliVoL9otho"/>
+  <contextParameter comment="" name="fiches" prompt="fiches?" promptNeeded="false" type="id_String" value="w7BqyEq0Na1"/>
+  <contextParameter comment="" name="prochaine_visite" prompt="prochaine_visite?" promptNeeded="false" type="id_String" value="FXOsGws33YA"/>
 </talendfile:ContextType>
