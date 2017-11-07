@@ -493,7 +493,7 @@
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()  " type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()  " type="id_Date" nullable="true"/>
         <mapperTableEntries name="name" expression="dataelement.name   " type="id_String" nullable="true"/>
-        <mapperTableEntries name="shortname" expression="dataelement.shortName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="shortname" expression="dataelement.shortName+' '+Var.uid" type="id_String" nullable="true"/>
         <mapperTableEntries name="valuetype" expression="dataelement.valueType   " type="id_String" nullable="true"/>
         <mapperTableEntries name="domaintype" expression="dataelement.domainType   " type="id_String" nullable="true"/>
         <mapperTableEntries name="aggregationtype" expression="dataelement.aggregationType   " type="id_String" nullable="true"/>
@@ -909,7 +909,7 @@
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="var1" expression="&quot;201707&quot;" type="id_String"/>
+        <mapperTableEntries name="var1" expression="TalendDate.addDate(TalendDate.getDate(&quot;yyyyMMdd&quot;),&quot;yyyyMMdd&quot;,-1,&quot;dd&quot;) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="dataset">
         <mapperTableEntries name="uid" expression="TalendString.getAsciiRandomString(11)  " type="id_String" nullable="true"/>

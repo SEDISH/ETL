@@ -158,7 +158,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select distinct MONTH(v.date_started) as Visit_MM,&#xA;YEAR(v.date_started) as AAAA,count(distinct v.visit_id) as Count&#xA;FROM openmrs.visit v, openmrs.encounter en, openmrs.location loc&#xA;WHERE v.visit_id=en.visit_id AND en.location_id=loc.location_id&#xA;GROUP BY MONTH(v.date_started)&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select distinct MONTH(v.date_started) as Visit_MM,&#xA;YEAR(v.date_started) as AAAA,count(distinct v.visit_id) as Count,&#xA;DATE_FORMAT(v.date_started, '%Y%m%d') AS period &#xA;FROM openmrs.visit v, openmrs.encounter en, openmrs.location loc&#xA;WHERE v.visit_id=en.visit_id AND en.location_id=loc.location_id&#xA;GROUP BY MONTH(v.date_started)&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -175,12 +175,15 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Count"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="period"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
       <column comment="" key="false" length="-1" name="Visit_MM" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AAAA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Count" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="period" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
@@ -206,12 +209,10 @@
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
-      <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="period" expression="row1.AAAA+'0'+row1.Visit_MM " type="id_String"/>
-      </varTables>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="data">
         <mapperTableEntries name="Count" expression="row1.Count  " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="period" expression="Var.period " type="id_String" nullable="true"/>
+        <mapperTableEntries name="period" expression="row1.period " type="id_String" nullable="true"/>
         <mapperTableEntries name="dataSet" expression="context.sampleReport  " type="id_String" nullable="true"/>
         <mapperTableEntries name="orgUnit" expression="context.Haiti  " type="id_String" nullable="true"/>
         <mapperTableEntries name="completeData" expression="TalendDate.getDate(&quot;YYYY-MM-DD&quot;)  " type="id_String" nullable="true"/>
@@ -222,6 +223,7 @@
         <mapperTableEntries name="Visit_MM" type="id_String" nullable="true"/>
         <mapperTableEntries name="AAAA" type="id_String" nullable="true"/>
         <mapperTableEntries name="Count" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="period" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
