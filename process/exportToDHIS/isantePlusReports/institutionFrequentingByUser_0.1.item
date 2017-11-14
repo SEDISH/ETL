@@ -23,7 +23,6 @@
     <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
-    <contextParameter comment="" name="Haiti" prompt="Haiti?" promptNeeded="false" repositoryContextId="_m8cd8KHlEeeNU-T51tLLfw" type="id_String" value="a7SxSzggwzc"/>
     <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
@@ -303,7 +302,7 @@
         <mapperTableEntries name="Total_Patient" expression="row6.Total_Patient  " type="id_Long"/>
         <mapperTableEntries name="period" expression="row6.period  " type="id_String"/>
         <mapperTableEntries name="dataSet" expression="context.institutionFrequentingByUser " type="id_String"/>
-        <mapperTableEntries name="orgUnit" expression="context.Haiti      " type="id_String"/>
+        <mapperTableEntries name="orgUnit" expression="row10.uid " type="id_String"/>
         <mapperTableEntries name="completeData" expression="TalendDate.getDate(&quot;CCYY-MM-DD&quot;)      " type="id_String"/>
         <mapperTableEntries name="dataElement" expression="row1.uid     " type="id_String"/>
         <mapperTableEntries name="Nouveau_Patient_VIHCategory" expression="context.Nouveau_Patient_VIH " type="id_String"/>
@@ -329,6 +328,15 @@
         <mapperTableEntries name="Patient_Non_VIH" type="id_Long"/>
         <mapperTableEntries name="Total_Patient" type="id_Long"/>
         <mapperTableEntries name="period" type="id_String"/>
+        <mapperTableEntries name="location_id" type="id_Integer" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="location_id" expression="row6.location_id " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="code" expression="" type="id_String" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row10" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="code" expression="row9.code " type="id_String" nullable="true"/>
+        <mapperTableEntries name="uid" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -618,7 +626,7 @@
       <column comment="" key="false" length="-1" name="datasetid" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="736">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
@@ -635,7 +643,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select  usr.username as User,&#xA; COUNT(CASE WHEN (entype.uuid='17536ba6-dd7c-4f58-8014-08c7cb798ac7'&#xA;                           OR entype.uuid='349ae0b4-65c1-4122-aa06-480f186c8350'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Nouveau_Patient_VIH,&#xA;                        &#xA; COUNT(CASE WHEN (entype.uuid='5c312603-25c1-4dbe-be18-1a167eb85f97'&#xA;                           OR entype.uuid='12f4d7c3-e047-4455-a607-47a40fe32460'&#xA;                           OR entype.uuid='709610ff-5e39-4a47-9c27-a60e740b0944'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Nouveau_Patient_Non_VIH,&#xA; COUNT(CASE WHEN (entype.uuid='17536ba6-dd7c-4f58-8014-08c7cb798ac7'&#xA;                           OR entype.uuid='349ae0b4-65c1-4122-aa06-480f186c8350'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='5c312603-25c1-4dbe-be18-1a167eb85f97'&#xA;                           OR entype.uuid='12f4d7c3-e047-4455-a607-47a40fe32460'&#xA;                           OR entype.uuid='709610ff-5e39-4a47-9c27-a60e740b0944'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Nouveau_Patient,&#xA;COUNT(CASE WHEN (entype.uuid='204ad066-c5c2-4229-9a62-644bc5617ca2'&#xA;                           OR entype.uuid='33491314-c352-42d0-bd5d-a9d0bffc9bf1'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Patient_VIH,&#xA;COUNT(CASE WHEN (entype.uuid='49592bec-dd22-4b6c-a97f-4dd2af6f2171'&#xA;                           OR entype.uuid='a5600919-4dde-4eb8-a45b-05c204af8284'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='fdb5b14f-555f-4282-b4c1-9286addf0aae'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Patient_Non_VIH,&#xA;COUNT(CASE WHEN (entype.uuid='204ad066-c5c2-4229-9a62-644bc5617ca2'&#xA;                           OR entype.uuid='33491314-c352-42d0-bd5d-a9d0bffc9bf1'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='49592bec-dd22-4b6c-a97f-4dd2af6f2171'&#xA;                           OR entype.uuid='a5600919-4dde-4eb8-a45b-05c204af8284'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='fdb5b14f-555f-4282-b4c1-9286addf0aae'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Total_Patient,&#xA;DATE_FORMAT(enc.encounter_datetime, '%Y%m%d') as period&#xA; FROM&#xA;openmrs.users usr,encounter enc, encounter_type entype&#xA; WHERE&#xA; enc.encounter_type=entype.encounter_type_id&#xA; AND(entype.uuid='17536ba6-dd7c-4f58-8014-08c7cb798ac7'&#xA;                           OR entype.uuid='349ae0b4-65c1-4122-aa06-480f186c8350'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='5c312603-25c1-4dbe-be18-1a167eb85f97'&#xA;                           OR entype.uuid='12f4d7c3-e047-4455-a607-47a40fe32460'&#xA;                           OR entype.uuid='709610ff-5e39-4a47-9c27-a60e740b0944'&#xA;                           OR entype.uuid='204ad066-c5c2-4229-9a62-644bc5617ca2'&#xA;                           OR entype.uuid='33491314-c352-42d0-bd5d-a9d0bffc9bf1'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='49592bec-dd22-4b6c-a97f-4dd2af6f2171'&#xA;                           OR entype.uuid='a5600919-4dde-4eb8-a45b-05c204af8284'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='fdb5b14f-555f-4282-b4c1-9286addf0aae')&#xA;GROUP BY enc.encounter_datetime&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select  usr.username as User,&#xA; COUNT(CASE WHEN (entype.uuid='17536ba6-dd7c-4f58-8014-08c7cb798ac7'&#xA;                           OR entype.uuid='349ae0b4-65c1-4122-aa06-480f186c8350'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Nouveau_Patient_VIH,&#xA;                        &#xA; COUNT(CASE WHEN (entype.uuid='5c312603-25c1-4dbe-be18-1a167eb85f97'&#xA;                           OR entype.uuid='12f4d7c3-e047-4455-a607-47a40fe32460'&#xA;                           OR entype.uuid='709610ff-5e39-4a47-9c27-a60e740b0944'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Nouveau_Patient_Non_VIH,&#xA; COUNT(CASE WHEN (entype.uuid='17536ba6-dd7c-4f58-8014-08c7cb798ac7'&#xA;                           OR entype.uuid='349ae0b4-65c1-4122-aa06-480f186c8350'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='5c312603-25c1-4dbe-be18-1a167eb85f97'&#xA;                           OR entype.uuid='12f4d7c3-e047-4455-a607-47a40fe32460'&#xA;                           OR entype.uuid='709610ff-5e39-4a47-9c27-a60e740b0944'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Nouveau_Patient,&#xA;COUNT(CASE WHEN (entype.uuid='204ad066-c5c2-4229-9a62-644bc5617ca2'&#xA;                           OR entype.uuid='33491314-c352-42d0-bd5d-a9d0bffc9bf1'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Patient_VIH,&#xA;COUNT(CASE WHEN (entype.uuid='49592bec-dd22-4b6c-a97f-4dd2af6f2171'&#xA;                           OR entype.uuid='a5600919-4dde-4eb8-a45b-05c204af8284'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='fdb5b14f-555f-4282-b4c1-9286addf0aae'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Patient_Non_VIH,&#xA;COUNT(CASE WHEN (entype.uuid='204ad066-c5c2-4229-9a62-644bc5617ca2'&#xA;                           OR entype.uuid='33491314-c352-42d0-bd5d-a9d0bffc9bf1'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='49592bec-dd22-4b6c-a97f-4dd2af6f2171'&#xA;                           OR entype.uuid='a5600919-4dde-4eb8-a45b-05c204af8284'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='fdb5b14f-555f-4282-b4c1-9286addf0aae'&#xA;                           ) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;THEN enc.encounter_id else null END) AS Total_Patient,&#xA;DATE_FORMAT(enc.encounter_datetime, '%Y%m%d') as period,enc.location_id&#xA; FROM&#xA;openmrs.users usr,encounter enc, encounter_type entype&#xA; WHERE&#xA; enc.encounter_type=entype.encounter_type_id&#xA; AND(entype.uuid='17536ba6-dd7c-4f58-8014-08c7cb798ac7'&#xA;                           OR entype.uuid='349ae0b4-65c1-4122-aa06-480f186c8350'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='5c312603-25c1-4dbe-be18-1a167eb85f97'&#xA;                           OR entype.uuid='12f4d7c3-e047-4455-a607-47a40fe32460'&#xA;                           OR entype.uuid='709610ff-5e39-4a47-9c27-a60e740b0944'&#xA;                           OR entype.uuid='204ad066-c5c2-4229-9a62-644bc5617ca2'&#xA;                           OR entype.uuid='33491314-c352-42d0-bd5d-a9d0bffc9bf1'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='49592bec-dd22-4b6c-a97f-4dd2af6f2171'&#xA;                           OR entype.uuid='a5600919-4dde-4eb8-a45b-05c204af8284'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   OR entype.uuid='fdb5b14f-555f-4282-b4c1-9286addf0aae')&#xA;GROUP BY enc.encounter_datetime,enc.location_id&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -662,6 +670,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="period"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="location_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_2">
@@ -673,6 +683,7 @@
       <column comment="" defaultValue="" key="false" length="21" name="Patient_Non_VIH" nullable="false" pattern="" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="21" name="Total_Patient" nullable="false" pattern="" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="7" name="period" nullable="false" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="location_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tWriteJSONField" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="640">
@@ -1136,6 +1147,85 @@
       <column comment="" key="false" length="-1" name="categorycomboid" nullable="true" pattern="" precision="-1" sourceType="INT4" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select l.location_id,l.value_reference from location_attribute l,location_attribute_type a&#xA;where l.attribute_type_id=a.location_attribute_type_id&#xA;and a.uuid='6242bf19-207e-4076-9d28-9290525b8ed9'&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="mysql_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="location_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMysqlInput_3">
+      <column comment="" key="false" length="-1" name="location_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="code" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="672">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select code,uid&#xA;from organisationunit&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="code"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="uid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlInput_1">
+      <column comment="" key="false" length="-1" name="code" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="uid" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
@@ -1651,6 +1741,24 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tPostgresqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1696" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlClose_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tPostgresqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1856" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlClose_2" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tMysqlClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="2016" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlClose_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tMysqlConnection_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
@@ -1908,6 +2016,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="User"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="location_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
@@ -1974,6 +2085,33 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_4" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_4" target="tPostgresqlClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="8" metaname="tMysqlInput_3" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_3" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="location_id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="8" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="code"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="uid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMap_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2113,6 +2251,12 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_3" target="tPostgresqlInput_5">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlClose_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlClose_1" target="tPostgresqlClose_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlClose_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlClose_2" target="tMysqlClose_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
@@ -2135,6 +2279,21 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlClose_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlClose_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlClose_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
