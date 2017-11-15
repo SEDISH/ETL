@@ -12,18 +12,19 @@
     <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Schema" prompt="DHISDatabase_Schema?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="firstLoading" prompt="firstLoading?" promptNeeded="false" repositoryContextId="_WoNpUMnYEeetSblQbjnFpw" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
     <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -762,7 +763,7 @@
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="var1" expression="TalendDate.addDate(TalendDate.getDate(&quot;yyyyMMdd&quot;),&quot;yyyyMMdd&quot;,-1,&quot;dd&quot;) " type="id_String"/>
+        <mapperTableEntries name="period" expression="TalendDate.addDate(TalendDate.getDate(&quot;yyyyMMdd&quot;),&quot;yyyyMMdd&quot;,-1,&quot;dd&quot;) " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="dataset">
         <mapperTableEntries name="uid" expression="TalendString.getAsciiRandomString(11)  " type="id_String" nullable="true"/>
@@ -773,7 +774,7 @@
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="sendvalues">
         <mapperTableEntries name="Total" expression="row6.Total       " type="id_Long"/>
-        <mapperTableEntries name="period" expression="Var.var1" type="id_String"/>
+        <mapperTableEntries name="period" expression="Var.period" type="id_String"/>
         <mapperTableEntries name="dataSet" expression="context.alertReport" type="id_String"/>
         <mapperTableEntries name="orgUnit" expression="row8.uid " type="id_String"/>
         <mapperTableEntries name="completeData" expression="TalendDate.getDate(&quot;CCYY-MM-DD&quot;)     " type="id_String"/>
@@ -1370,7 +1371,7 @@
       <column key="false" length="4048" name="DHISWarnings" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="384" posY="768">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_6" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/programy/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>

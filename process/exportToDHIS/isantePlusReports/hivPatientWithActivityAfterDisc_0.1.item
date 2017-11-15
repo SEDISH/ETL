@@ -13,6 +13,7 @@
     <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Schema" prompt="DHISDatabase_Schema?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="firstLoading" prompt="firstLoading?" promptNeeded="false" repositoryContextId="_WoNpUMnYEeetSblQbjnFpw" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
@@ -1363,7 +1364,7 @@
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="copyOfagg">
+      <outputTables sizeState="INTERMEDIATE" name="copyOfagg" expressionFilter="context.firstLoading==true?TalendDate.compareDate(row24.date_discontinuation,TalendDate.getCurrentDate(),&quot;yyyy-MM-dd&quot;)==-1:TalendDate.compareDate(row24.date_discontinuation,TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;),&quot;yyyy-MM-dd&quot;)==0" activateExpressionFilter="true">
         <mapperTableEntries name="patient_id" expression="row21.patient_id   " type="id_Integer"/>
         <mapperTableEntries name="identifier" expression="row21.identifier   " type="id_String" nullable="true"/>
         <mapperTableEntries name="site" expression="row21.site   " type="id_String" nullable="true"/>

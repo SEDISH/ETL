@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="days0_30" prompt="days0_30?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="XKYt4TJ9XCO"/>
+    <contextParameter comment="" name="days31_60" prompt="days31_60?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="G2mnsHyVVSd"/>
+    <contextParameter comment="" name="days61_90" prompt="days61_90?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="xBN9ohifASm"/>
+    <contextParameter comment="" name="days91_120" prompt="days91_120?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="LSOn6gW0uo4"/>
+    <contextParameter comment="" name="daysMoreThan120" prompt="daysMoreThan120?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="lYdeitMbe5x"/>
+    <contextParameter comment="" name="uniquePatients" prompt="uniquePatients?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value=""/>
+    <contextParameter comment="" name="numberPatientReceivingARVByPeriod" prompt="numberPatientReceivingARVByPeriod?" promptNeeded="false" repositoryContextId="_eGg_EKHlEeeNU-T51tLLfw" type="id_String" value="U1vcxpYZy3X"/>
     <contextParameter comment="" name="sampleReport" prompt="sampleReport?" promptNeeded="false" repositoryContextId="_9CKNUKHkEeeNU-T51tLLfw" type="id_String" value="cZ15FlUppKo"/>
     <contextParameter comment="" name="DHISLogin" prompt="DHISLogin?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISPassword" prompt="DHISPassword?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_Password" value=""/>
     <contextParameter comment="" name="DHISUrl" prompt="DHISUrl?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="DHISDatabase_Database" prompt="DHISDatabase_Database?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="DHISDatabase_Login" prompt="DHISDatabase_Login?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="DHISDatabase_Password" prompt="DHISDatabase_Password?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_Password" value=""/>
+    <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="DHISDatabase_Schema" prompt="DHISDatabase_Schema?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="firstLoading" prompt="firstLoading?" promptNeeded="false" repositoryContextId="_WoNpUMnYEeetSblQbjnFpw" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
     <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
     <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
-    <contextParameter comment="" name="days91_120" prompt="days91_120?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="LSOn6gW0uo4"/>
-    <contextParameter comment="" name="days31_60" prompt="days31_60?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="G2mnsHyVVSd"/>
-    <contextParameter comment="" name="days61_90" prompt="days61_90?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="xBN9ohifASm"/>
-    <contextParameter comment="" name="days0_30" prompt="days0_30?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="XKYt4TJ9XCO"/>
-    <contextParameter comment="" name="numberPatientReceivingARVByPeriod" prompt="numberPatientReceivingARVByPeriod?" promptNeeded="false" repositoryContextId="_eGg_EKHlEeeNU-T51tLLfw" type="id_String" value="U1vcxpYZy3X"/>
-    <contextParameter comment="" name="uniquePatients" prompt="uniquePatients?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value=""/>
-    <contextParameter comment="" name="daysMoreThan120" prompt="daysMoreThan120?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="lYdeitMbe5x"/>
-    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Schema" prompt="DHISDatabase_Schema?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Database" prompt="DHISDatabase_Database?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Password" prompt="DHISDatabase_Password?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_Password" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Login" prompt="DHISDatabase_Login?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>
@@ -224,7 +225,7 @@
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="in" activateCondensedTool="true">
+      <outputTables sizeState="INTERMEDIATE" name="in" expressionFilter="context.firstLoading==true?TalendDate.compareDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,row1.period),TalendDate.getCurrentDate(),&quot;yyyy-MM-dd&quot;)==-1:TalendDate.compareDate(TalendDate.parseDate(&quot;yyyyMMdd&quot;,row1.period),TalendDate.addDate(TalendDate.getCurrentDate(),-1,&quot;dd&quot;),&quot;yyyy-MM-dd&quot;)==0" activateExpressionFilter="true">
         <mapperTableEntries name="days0_30" expression="row1.days0_30   " type="id_Long"/>
         <mapperTableEntries name="days31_60" expression="row1.days31_60   " type="id_Long"/>
         <mapperTableEntries name="days61_90" expression="row1.days61_90 " type="id_Long"/>
