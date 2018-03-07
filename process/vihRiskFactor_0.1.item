@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value="6666"/>
+    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value="127.0.0.1"/>
     <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value="127.0.0.1"/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value="6667"/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
   <parameters>

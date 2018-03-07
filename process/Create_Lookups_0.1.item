@@ -13,11 +13,11 @@
     <contextParameter comment="" name="ARV_status_loockup_Encoding" prompt="ARV_status_loockup_Encoding?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="UTF-8"/>
     <contextParameter comment="" name="ARV_status_loockup_RowSeparator" prompt="ARV_status_loockup_RowSeparator?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="&quot;\n&quot;"/>
     <contextParameter comment="" name="ARV_status_loockup_FieldSeparator" prompt="ARV_status_loockup_FieldSeparator?" promptNeeded="false" repositoryContextId="_ABbRkJ4FEeeYy7K7VysegQ" type="id_String" value="&quot;;&quot;"/>
-    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value="127.0.0.1"/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
     <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
+    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value="6667"/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
   <parameters>
