@@ -15,4 +15,5 @@
   <contextParameter comment="" name="visitNextFourteenDays_stage" prompt="visitNextFourteenDays_stage?" promptNeeded="false" type="id_String" value="GKgZ3OnIdsy"/>
   <contextParameter comment="" name="visitNextSevenDays_stage" prompt="visitNextSevenDays_stage?" promptNeeded="false" type="id_String" value="vouQ9awMFRL"/>
   <contextParameter comment="" name="patientsWithTbSymptomWithoutCrachat_stage" prompt="patientsWithTbSymptomWithoutCrachat_stage?" promptNeeded="false" type="id_String" value="eRQ3JsIVDIe"/>
+  <contextParameter comment="" name="dashboardReport_stage" prompt="dashboardReport_stage?" promptNeeded="false" type="id_String" value="zqbLP5kJWAf"/>
 </talendfile:ContextType>

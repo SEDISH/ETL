@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="onHaart_regular_adult" prompt="onHaart_regular_adult?" promptNeeded="false" type="id_Integer" value="22"/>
+  <contextParameter comment="" name="onHaart_regular_child" prompt="onHaart_regular_child?" promptNeeded="false" type="id_Integer" value="23"/>
+  <contextParameter comment="" name="onHaart_missingAppointment_adult" prompt="onHaart_missingAppointment_adult?" promptNeeded="false" type="id_Integer" value="24"/>
+  <contextParameter comment="" name="onHaart_missingAppointment_child" prompt="onHaart_missingAppointment_child?" promptNeeded="false" type="id_Integer" value="25"/>
+  <contextParameter comment="" name="onHaart_lostToFollowUp_adult" prompt="onHaart_lostToFollowUp_adult?" promptNeeded="false" type="id_Integer" value="26"/>
+  <contextParameter comment="" name="onHaart_lostToFollowUp_child" prompt="onHaart_lostToFollowUp_child?" promptNeeded="false" type="id_Integer" value="27"/>
+  <contextParameter comment="" name="onHaart_stopped_adult" prompt="onHaart_stopped_adult?" promptNeeded="false" type="id_Integer" value="28"/>
+  <contextParameter comment="" name="onHaart_stopped_child" prompt="onHaart_stopped_child?" promptNeeded="false" type="id_Integer" value="29"/>
+  <contextParameter comment="" name="onHaart_transfert_adult" prompt="onHaart_transfert_adult?" promptNeeded="false" type="id_Integer" value="30"/>
+  <contextParameter comment="" name="onHaart_transfert_child" prompt="onHaart_transfert_child?" promptNeeded="false" type="id_Integer" value="31"/>
+  <contextParameter comment="" name="onHaart_deathOnART_adult" prompt="onHaart_deathOnART_adult?" promptNeeded="false" type="id_Integer" value="32"/>
+  <contextParameter comment="" name="onHaart_deathOnART_child" prompt="onHaart_deathOnART_child?" promptNeeded="false" type="id_Integer" value="33"/>
+  <contextParameter comment="" name="onHaart_total_adult" prompt="onHaart_total_adult?" promptNeeded="false" type="id_Integer" value="34"/>
+  <contextParameter comment="" name="onHaart_total_child" prompt="onHaart_total_child?" promptNeeded="false" type="id_Integer" value="35"/>
+  <contextParameter comment="" name="palliativeCare_recentOnPreART_adult" prompt="palliativeCare_recentOnPreART_adult?" promptNeeded="false" type="id_Integer" value="10"/>
+  <contextParameter comment="" name="palliativeCare_recentOnPreART_child" prompt="palliativeCare_recentOnPreART_child?" promptNeeded="false" type="id_Integer" value="11"/>
+  <contextParameter comment="" name="palliativeCare_actifOnPreART_adult" prompt="palliativeCare_actifOnPreART_adult?" promptNeeded="false" type="id_Integer" value="12"/>
+  <contextParameter comment="" name="palliativeCare_actifOnPreART_child" prompt="palliativeCare_actifOnPreART_child?" promptNeeded="false" type="id_Integer" value="13"/>
+  <contextParameter comment="" name="palliativeCare_lostToFollowUpOnPreART_adult" prompt="palliativeCare_lostToFollowUpOnPreART_adult?" promptNeeded="false" type="id_Integer" value="14"/>
+  <contextParameter comment="" name="palliativeCare_lostToFollowUpOnPreART_child" prompt="palliativeCare_lostToFollowUpOnPreART_child?" promptNeeded="false" type="id_Integer" value="15"/>
+  <contextParameter comment="" name="palliativeCare_transferredOnPreART_adult" prompt="palliativeCare_transferredOnPreART_adult?" promptNeeded="false" type="id_Integer" value="16"/>
+  <contextParameter comment="" name="palliativeCare_transferredOnPreART_child" prompt="palliativeCare_transferredOnPreART_child?" promptNeeded="false" type="id_Integer" value="17"/>
+  <contextParameter comment="" name="palliativeCare_deathOnPreART_adult" prompt="palliativeCare_deathOnPreART_adult?" promptNeeded="false" type="id_Integer" value="18"/>
+  <contextParameter comment="" name="palliativeCare_deathOnPreART_child" prompt="palliativeCare_deathOnPreART_child?" promptNeeded="false" type="id_Integer" value="19"/>
+  <contextParameter comment="" name="palliativeCare_total_adult" prompt="palliativeCare_total_adult?" promptNeeded="false" type="id_Integer" value="20"/>
+  <contextParameter comment="" name="palliativeCare_total_child" prompt="palliativeCare_total_child?" promptNeeded="false" type="id_Integer" value="21"/>
+  <contextParameter comment="" name="grandTotal" prompt="grandTotal?" promptNeeded="false" type="id_Integer" value="36"/>
+  <contextParameter comment="" name="latestDate" prompt="latestDate?" promptNeeded="false" type="id_Integer" value="37"/>
+  <contextParameter comment="" name="oldestDate" prompt="oldestDate?" promptNeeded="false" type="id_Integer" value="38"/>
+  <contextParameter comment="" name="softwareVersion" prompt="softwareVersion?" promptNeeded="false" type="id_Integer" value="39"/>
+</talendfile:ContextType>
