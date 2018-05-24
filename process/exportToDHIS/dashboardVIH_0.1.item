@@ -2321,7 +2321,7 @@
       <column comment="" key="false" length="-1" name="lastupdated" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="onHaart_regular_adult" expressionFilter="row20.uid.equals(context.onHaart_regular_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
@@ -2337,189 +2337,189 @@
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_missingAppointment_adult" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_missingAppointment_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_missingAppointment_adult" expressionFilter="row20.uid.equals(context.onHaart_missingAppointment_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_missingAppointment_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_missingAppointment_child" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_missingAppointment_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_missingAppointment_child" expressionFilter="row20.uid.equals(context.onHaart_missingAppointment_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_missingAppointment_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_lostToFollowUp_adult" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_lostToFollowUp_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_lostToFollowUp_adult" expressionFilter="row20.uid.equals(context.onHaart_lostToFollowUp_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_lostToFollowUp_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_lostToFollowUp_child" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_lostToFollowUp_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_lostToFollowUp_child" expressionFilter="row20.uid.equals(context.onHaart_lostToFollowUp_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_lostToFollowUp_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_stopped_adult" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_stopped_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_stopped_adult" expressionFilter="row20.uid.equals(context.onHaart_stopped_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_stopped_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_stopped_child" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_stopped_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_stopped_child" expressionFilter="row20.uid.equals(context.onHaart_stopped_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_stopped_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_transfert_adult" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_transfert_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_transfert_adult" expressionFilter="row20.uid.equals(context.onHaart_transfert_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_transfert_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_transfert_child" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_transfert_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_transfert_child" expressionFilter="row20.uid.equals(context.onHaart_transfert_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_transfert_child ).toString();" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_deathOnART_adult" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_deathOnART_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_deathOnART_adult" expressionFilter="row20.uid.equals(context.onHaart_deathOnART_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_deathOnART_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_deathOnART_child" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_deathOnART_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_deathOnART_child" expressionFilter="row20.uid.equals(context.onHaart_deathOnART_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_deathOnART_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_total_adult" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_total_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_total_adult" expressionFilter="row20.uid.equals(context.onHaart_total_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_total_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="onHaart_total_child" minimized="true" expressionFilter="row20.uid.equals(context.onHaart_total_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="onHaart_total_child" expressionFilter="row20.uid.equals(context.onHaart_total_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.onHaart_total_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_recentOnPreART_adult" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_recentOnPreART_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_recentOnPreART_adult" expressionFilter="row20.uid.equals(context.palliativeCare_recentOnPreART_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_recentOnPreART_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_recentOnPreART_child" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_recentOnPreART_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_recentOnPreART_child" expressionFilter="row20.uid.equals(context.palliativeCare_recentOnPreART_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_recentOnPreART_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_actifOnPreART_adult" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_actifOnPreART_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_actifOnPreART_adult" expressionFilter="row20.uid.equals(context.palliativeCare_actifOnPreART_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_actifOnPreART_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_actifOnPreART_child" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_actifOnPreART_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_actifOnPreART_child" expressionFilter="row20.uid.equals(context.palliativeCare_actifOnPreART_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_actifOnPreART_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_lostToFollowUpOnPreART_adult" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_lostToFollowUpOnPreART_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_lostToFollowUpOnPreART_adult" expressionFilter="row20.uid.equals(context.palliativeCare_lostToFollowUpOnPreART_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_lostToFollowUpOnPreART_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_lostToFollowUpOnPreART_child" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_lostToFollowUpOnPreART_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_lostToFollowUpOnPreART_child" expressionFilter="row20.uid.equals(context.palliativeCare_lostToFollowUpOnPreART_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_lostToFollowUpOnPreART_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_transferredOnPreART_adult" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_transferredOnPreART_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_transferredOnPreART_adult" expressionFilter="row20.uid.equals(context.palliativeCare_transferredOnPreART_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_transferredOnPreART_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_transferredOnPreART_child" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_transferredOnPreART_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_transferredOnPreART_child" expressionFilter="row20.uid.equals(context.palliativeCare_transferredOnPreART_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_transferredOnPreART_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_deathOnPreART_adult" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_deathOnPreART_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_deathOnPreART_adult" expressionFilter="row20.uid.equals(context.palliativeCare_deathOnPreART_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_deathOnPreART_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_deathOnPreART_child" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_deathOnPreART_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_deathOnPreART_child" expressionFilter="row20.uid.equals(context.palliativeCare_deathOnPreART_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_deathOnPreART_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_total_adult" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_total_adult)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_total_adult" expressionFilter="row20.uid.equals(context.palliativeCare_total_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_total_adult ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_total_child" minimized="true" expressionFilter="row20.uid.equals(context.palliativeCare_total_child)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="palliativeCare_total_child" expressionFilter="row20.uid.equals(context.palliativeCare_total_child)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.palliativeCare_total_child ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="grandTotal" minimized="true" expressionFilter="row20.uid.equals(context.grandTotal)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="grandTotal" expressionFilter="row20.uid.equals(context.grandTotal)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new Integer(addTrackedEntityDataValue.grandTotal ).toString()" type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="latestDate" minimized="true" expressionFilter="row20.uid.equals(context.latestDate)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="latestDate" expressionFilter="row20.uid.equals(context.latestDate)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new SimpleDateFormat(&quot;yyyy-MM-dd&quot;).format(addTrackedEntityDataValue.latestDate) " type="id_String" nullable="true"/>
         <mapperTableEntries name="created" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lastupdated" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="oldestDate" minimized="true" expressionFilter="row20.uid.equals(context.oldestDate)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="oldestDate" expressionFilter="row20.uid.equals(context.oldestDate)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>
         <mapperTableEntries name="dataelementid" expression="row20.dataelementid " type="id_Integer"/>
         <mapperTableEntries name="value" expression="new SimpleDateFormat(&quot;yyyy-MM-dd&quot;).format(addTrackedEntityDataValue.oldestDate) " type="id_String" nullable="true"/>
