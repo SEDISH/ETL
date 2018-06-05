@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value="6666"/>
-    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="ETLDatabase_Server" prompt="ETLDatabase_Server?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Database" prompt="ETLDatabase_Database?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Login" prompt="ETLDatabase_Login?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Password" prompt="ETLDatabase_Password?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_Password" value=""/>
-    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value="6667"/>
+    <contextParameter comment="" name="ETLDatabase_Port" prompt="ETLDatabase_Port?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
     <contextParameter comment="" name="ETLDatabase_Schema" prompt="ETLDatabase_Schema?" promptNeeded="false" repositoryContextId="_nURU0J-EEeeXbv059Vk7aw" type="id_String" value=""/>
   </context>
   <parameters>
@@ -692,15 +692,15 @@
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="row13.patient_id " type="id_Integer"/>
-        <mapperTableEntries name="birthdate" expression="row14.birthdate " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="birthdate" expression="row14.birthdate " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="check" expressionFilter="TalendDate.diffDate(TalendDate.getCurrentDate(),Var.birthdate,&quot;yyyy&quot;)&lt;=14" activateExpressionFilter="true">
         <mapperTableEntries name="patient_id" expression="Var.patient_id " type="id_Integer"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row13" expressionFilter="row13.test_id==844&amp;&amp;row13.test_result.equals(&quot;1302&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row13" expressionFilter="row13.test_id==844 &amp;&amp; row13.test_result != null &amp;&amp; row13.test_result.equals(&quot;1302&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
         <mapperTableEntries name="encounter_id" type="id_Integer"/>
         <mapperTableEntries name="test_id" type="id_Integer"/>
@@ -1409,15 +1409,15 @@
       <column comment="" defaultValue="" key="false" length="-1" name="patient_id" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="patient_id" expression="row23.patient_id " type="id_Integer"/>
-        <mapperTableEntries name="birthdate" expression="row24.birthdate " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="birthdate" expression="row24.birthdate " type="id_Date"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="copyOfcheck_0" expressionFilter="TalendDate.diffDate(TalendDate.getCurrentDate(),Var.birthdate,&quot;yyyy&quot;)&lt;=14" activateExpressionFilter="true">
         <mapperTableEntries name="patient_id" expression="Var.patient_id " type="id_Integer"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row23" expressionFilter="row23.test_id==844&amp;&amp;row23.test_result.equals(&quot;1302&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row23" expressionFilter="row23.test_id==844 &amp;&amp; row23.test_result != null &amp;&amp; row23.test_result.equals(&quot;1302&quot;)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="patient_id" type="id_Integer"/>
         <mapperTableEntries name="encounter_id" type="id_Integer"/>
         <mapperTableEntries name="test_id" type="id_Integer"/>
