@@ -2321,7 +2321,7 @@
       <column comment="" key="false" length="-1" name="lastupdated" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="onHaart_regular_adult" expressionFilter="row20.uid.equals(context.onHaart_regular_adult)" activateExpressionFilter="true">
         <mapperTableEntries name="programstageinstanceid" expression="addTrackedEntityDataValue.programstageinstanceid " type="id_Integer"/>

@@ -8,23 +8,23 @@
     <contextParameter comment="" name="Patient_VIH" prompt="Patient_VIH?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="jCChsvPa8ku"/>
     <contextParameter comment="" name="Total_Patient" prompt="Total_Patient?" promptNeeded="false" repositoryContextId="_7_xLIKIDEeeNU-T51tLLfw" type="id_String" value="KI7XSbYybHF"/>
     <contextParameter comment="" name="institutionFrequenting" prompt="institutionFrequenting?" promptNeeded="false" repositoryContextId="_eGg_EKHlEeeNU-T51tLLfw" type="id_String" value="p8XJAdMAnry"/>
-    <contextParameter comment="" name="sampleReport" prompt="sampleReport?" promptNeeded="false" repositoryContextId="_9CKNUKHkEeeNU-T51tLLfw" type="id_String" value="cZ15FlUppKo"/>
+    <contextParameter comment="" name="sampleReport" prompt="sampleReport?" promptNeeded="false" repositoryContextId="_9CKNUKHkEeeNU-T51tLLfw" type="id_String" value="apBXtHLJvCq"/>
     <contextParameter comment="" name="DHISLogin" prompt="DHISLogin?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISPassword" prompt="DHISPassword?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_Password" value=""/>
-    <contextParameter comment="" name="DHISUrl" prompt="DHISUrl?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value="http://127.0.0.1:6668"/>
+    <contextParameter comment="" name="DHISUrl" prompt="DHISUrl?" promptNeeded="false" repositoryContextId="_Au2KYKH5EeeNU-T51tLLfw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Database" prompt="DHISDatabase_Database?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Login" prompt="DHISDatabase_Login?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Password" prompt="DHISDatabase_Password?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_Password" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value="6667"/>
+    <contextParameter comment="" name="DHISDatabase_Port" prompt="DHISDatabase_Port?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="DHISDatabase_Schema" prompt="DHISDatabase_Schema?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
-    <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="DHISDatabase_Server" prompt="DHISDatabase_Server?" promptNeeded="false" repositoryContextId="_E5SJwLALEeeaCcPCJyJhLw" type="id_String" value=""/>
     <contextParameter comment="" name="firstLoading" prompt="firstLoading?" promptNeeded="false" repositoryContextId="_WoNpUMnYEeetSblQbjnFpw" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="SHRDatabase_AdditionalParams" prompt="SHRDatabase_AdditionalParams?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Database" prompt="SHRDatabase_Database?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Login" prompt="SHRDatabase_Login?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
     <contextParameter comment="" name="SHRDatabase_Password" prompt="SHRDatabase_Password?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_Password" value=""/>
-    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value="6666"/>
-    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value="127.0.0.1"/>
+    <contextParameter comment="" name="SHRDatabase_Port" prompt="SHRDatabase_Port?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
+    <contextParameter comment="" name="SHRDatabase_Server" prompt="SHRDatabase_Server?" promptNeeded="false" repositoryContextId="_tHTuIJIVEeedjac0LmuSqg" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
