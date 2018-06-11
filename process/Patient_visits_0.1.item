@@ -982,7 +982,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="visit_id"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="Patient_Visit"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
