@@ -556,7 +556,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `obs`.`obs_id`, &#xA;  `obs`.`person_id`, &#xA;  `obs`.`concept_id`, &#xA;  `obs`.`encounter_id`, &#xA;  `obs`.`order_id`, &#xA;  `obs`.`obs_datetime`, &#xA;  `obs`.`location_id`, &#xA;  `obs`.`obs_group_id`, &#xA;  `obs`.`accession_number`, &#xA;  `obs`.`value_group_id`, &#xA;  `obs`.`value_coded`, &#xA;  `obs`.`value_coded_name_id`, &#xA;  `obs`.`value_drug`, &#xA;  `obs`.`value_datetime`, &#xA;  `obs`.`value_numeric`, &#xA;  `obs`.`value_modifier`, &#xA;  `obs`.`value_text`, &#xA;  `obs`.`value_complex`, &#xA;  `obs`.`comments`, &#xA;  `obs`.`creator`, &#xA;  `obs`.`date_created`, &#xA;  `obs`.`voided`, &#xA;  `obs`.`voided_by`, &#xA;  `obs`.`date_voided`, &#xA;  `obs`.`void_reason`, &#xA;  `obs`.`uuid`, &#xA;  `obs`.`previous_version`, &#xA;  `obs`.`form_namespace_and_path`&#xA;FROM `obs`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `obs`.`obs_id`, &#xA;  `obs`.`person_id`, &#xA;  `obs`.`concept_id`, &#xA;  `obs`.`encounter_id`, &#xA;  `obs`.`order_id`, &#xA;  `obs`.`obs_datetime`, &#xA;  `obs`.`location_id`, &#xA;  `obs`.`obs_group_id`, &#xA;  `obs`.`accession_number`, &#xA;  `obs`.`value_group_id`, &#xA;  `obs`.`value_coded`, &#xA;  `obs`.`value_coded_name_id`, &#xA;  `obs`.`value_drug`, &#xA;  `obs`.`value_datetime`, &#xA;  `obs`.`value_numeric`, &#xA;  `obs`.`value_modifier`, &#xA;  `obs`.`value_text`, &#xA;  `obs`.`value_complex`, &#xA;  `obs`.`comments`, &#xA;  `obs`.`creator`, &#xA;  `obs`.`date_created`, &#xA;  `obs`.`voided`, &#xA;  `obs`.`voided_by`, &#xA;  `obs`.`date_voided`, &#xA;  `obs`.`void_reason`, &#xA;  `obs`.`uuid`, &#xA;  `obs`.`previous_version`, &#xA;  `obs`.`form_namespace_and_path`&#xA;FROM `obs`&#xA;WHERE concept_id = 1282&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -716,7 +716,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="416">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_3" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
@@ -735,7 +735,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `obs`.`obs_id`, &#xA;  `obs`.`person_id`, &#xA;  `obs`.`concept_id`, &#xA;  `obs`.`encounter_id`, &#xA;  `obs`.`order_id`, &#xA;  `obs`.`obs_datetime`, &#xA;  `obs`.`location_id`, &#xA;  `obs`.`obs_group_id`, &#xA;  `obs`.`accession_number`, &#xA;  `obs`.`value_group_id`, &#xA;  `obs`.`value_coded`, &#xA;  `obs`.`value_coded_name_id`, &#xA;  `obs`.`value_drug`, &#xA;  `obs`.`value_datetime`, &#xA;  `obs`.`value_numeric`, &#xA;  `obs`.`value_modifier`, &#xA;  `obs`.`value_text`, &#xA;  `obs`.`value_complex`, &#xA;  `obs`.`comments`, &#xA;  `obs`.`creator`, &#xA;  `obs`.`date_created`, &#xA;  `obs`.`voided`, &#xA;  `obs`.`voided_by`, &#xA;  `obs`.`date_voided`, &#xA;  `obs`.`void_reason`, &#xA;  `obs`.`uuid`, &#xA;  `obs`.`previous_version`, &#xA;  `obs`.`form_namespace_and_path`&#xA;FROM `obs`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `obs`.`obs_id`, &#xA;  `obs`.`person_id`, &#xA;  `obs`.`concept_id`, &#xA;  `obs`.`encounter_id`, &#xA;  `obs`.`order_id`, &#xA;  `obs`.`obs_datetime`, &#xA;  `obs`.`location_id`, &#xA;  `obs`.`obs_group_id`, &#xA;  `obs`.`accession_number`, &#xA;  `obs`.`value_group_id`, &#xA;  `obs`.`value_coded`, &#xA;  `obs`.`value_coded_name_id`, &#xA;  `obs`.`value_drug`, &#xA;  `obs`.`value_datetime`, &#xA;  `obs`.`value_numeric`, &#xA;  `obs`.`value_modifier`, &#xA;  `obs`.`value_text`, &#xA;  `obs`.`value_complex`, &#xA;  `obs`.`comments`, &#xA;  `obs`.`creator`, &#xA;  `obs`.`date_created`, &#xA;  `obs`.`voided`, &#xA;  `obs`.`voided_by`, &#xA;  `obs`.`date_voided`, &#xA;  `obs`.`void_reason`, &#xA;  `obs`.`uuid`, &#xA;  `obs`.`previous_version`, &#xA;  `obs`.`form_namespace_and_path`&#xA;FROM `obs`&#xA;WHERE concept_id = 163711&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -895,7 +895,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="416">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_5" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/user/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY" show="false"/>
@@ -914,7 +914,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `obs`.`obs_id`, &#xA;  `obs`.`person_id`, &#xA;  `obs`.`concept_id`, &#xA;  `obs`.`encounter_id`, &#xA;  `obs`.`order_id`, &#xA;  `obs`.`obs_datetime`, &#xA;  `obs`.`location_id`, &#xA;  `obs`.`obs_group_id`, &#xA;  `obs`.`accession_number`, &#xA;  `obs`.`value_group_id`, &#xA;  `obs`.`value_coded`, &#xA;  `obs`.`value_coded_name_id`, &#xA;  `obs`.`value_drug`, &#xA;  `obs`.`value_datetime`, &#xA;  `obs`.`value_numeric`, &#xA;  `obs`.`value_modifier`, &#xA;  `obs`.`value_text`, &#xA;  `obs`.`value_complex`, &#xA;  `obs`.`comments`, &#xA;  `obs`.`creator`, &#xA;  `obs`.`date_created`, &#xA;  `obs`.`voided`, &#xA;  `obs`.`voided_by`, &#xA;  `obs`.`date_voided`, &#xA;  `obs`.`void_reason`, &#xA;  `obs`.`uuid`, &#xA;  `obs`.`previous_version`, &#xA;  `obs`.`form_namespace_and_path`&#xA;FROM `obs`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `obs`.`obs_id`, &#xA;  `obs`.`person_id`, &#xA;  `obs`.`concept_id`, &#xA;  `obs`.`encounter_id`, &#xA;  `obs`.`order_id`, &#xA;  `obs`.`obs_datetime`, &#xA;  `obs`.`location_id`, &#xA;  `obs`.`obs_group_id`, &#xA;  `obs`.`accession_number`, &#xA;  `obs`.`value_group_id`, &#xA;  `obs`.`value_coded`, &#xA;  `obs`.`value_coded_name_id`, &#xA;  `obs`.`value_drug`, &#xA;  `obs`.`value_datetime`, &#xA;  `obs`.`value_numeric`, &#xA;  `obs`.`value_modifier`, &#xA;  `obs`.`value_text`, &#xA;  `obs`.`value_complex`, &#xA;  `obs`.`comments`, &#xA;  `obs`.`creator`, &#xA;  `obs`.`date_created`, &#xA;  `obs`.`voided`, &#xA;  `obs`.`voided_by`, &#xA;  `obs`.`date_voided`, &#xA;  `obs`.`void_reason`, &#xA;  `obs`.`uuid`, &#xA;  `obs`.`previous_version`, &#xA;  `obs`.`form_namespace_and_path`&#xA;FROM `obs`&#xA;WHERE concept_id = 1276&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
